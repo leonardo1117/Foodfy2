@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/* === CENTRALIZANDO TODOS OS ELEMENTOS === */
+.container{   
+    margin: 0 230px;
+    
+}
+
+/* === HEADER === */
+
+header{
+  margin: 0 230px;
+  padding-top: 38px;
+  padding-bottom: 38px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  position: relative;
+}
+
+header img{
+  position: absolute;
+  top: 38px;
+}
+
+
+.links{
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top: 38px;
+    left: 220px;
+}
+
+.links a{
+    text-decoration: none;
+    margin: 0 30px;
+    font-size: 16px;
+}
+
+/* === CONTAINER COM AS MELHORES RECEITAS === */
+
+.principal{
+    background: #FBDFDB;
+    height: 366px;
+    border-radius: 30px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+}
+
+
+
+.principal__content{
+  width: 316px;
+  margin: auto 60px;
+}
+
+.principal__content h1{
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+}
+
+.principal__content h2{
+    font-weight: normal;
+    opacity: 0.7;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+
+.principal img{
+  padding: 66px 100px 0 248px;
+  position: relative;
+}
+
+
+
+
+/* === HOME PAGE RECEITAS MAIS ACESSADAS === */
+
+.receitas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.mais-acessadas{
+  margin-top: 50px;
+}
+
+.receita{
+  width: 100%;
+}
+
+.receita img{
+  border-radius: 15px;
+  width: 100%;
+}
+
+.receita__nome{
+  margin-top: 20px;
+}
+
+
+.receita__por{
+  font-size: 16px;
+  color: #777777;
+  margin-top: 5px;
+}
+
+
+/* === FOOTER === */
+
+footer{
+  margin-top: 50px;
+  padding: 23px;
+  background: #EEEEEE;
+}
+
+footer p{
+  color: #999999;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+/* ===== PAGINA SOBRE ===== */
+
+
+.sobre__textos h1{
+  margin: 50px auto;
+}
+
+.sobre__textos p{
+  margin-top: 20px;
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+}
+
+/* === RECIPE INFORMATION PAGE ===  */
+
+.single__recipe{
+  position: relative;
+  display: grid;
+  /* gap: 20px; */
+}
+
+
+.single__recipe img{
+  border-radius: 15px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.btn{
+  font-size: 12px;
+  color: #999999;
+  cursor: pointer;
+
+}
+
+
+.block__ingredients{
+  display: none;
+}
+
+
+.active {
+  display: none;
+}
+
+
+.pack{
+  display: flex;
+}
