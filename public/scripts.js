@@ -29,12 +29,12 @@ function showInformation(informationToShow, buttonClicked) {
   if (informationToShow.style.display == 'none') {
     buttonClicked.addEventListener("click", function () {
       informationToShow.style.display = 'flex'
-      buttonClicked.innerHTML = 'Esconder'
+      buttonClicked.innerHTML = 'ESCONDER'
     })
   } else {
     buttonClicked.addEventListener("click", function () {
       informationToShow.style.display = 'none'
-      buttonClicked.innerHTML = 'Mostrar'
+      buttonClicked.innerHTML = 'MOSTRAR'
     })
   }
 }

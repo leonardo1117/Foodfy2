@@ -110,11 +110,12 @@ header img{
 
 .receita img{
   border-radius: 15px;
-  width: 100%;
+  width: 90%;
 }
 
 .receita__nome{
   margin-top: 20px;
+  color:#111111
 }
 
 
@@ -156,22 +157,46 @@ footer p{
 }
 
 /* === RECIPE INFORMATION PAGE ===  */
+.wrapper-recipe ul{
+  position: relative;
+  left: 14px;
+}
+
+.wrapper-recipe ul, p{
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+  margin-top: 20px;
+}
+
 
 .single__recipe{
   position: relative;
   display: grid;
-  /* gap: 20px; */
+  text-align: center;
+  margin-bottom: 50px;
 }
 
+#recipeTitle{
+  font-size: 36px;
+}
 
 .single__recipe img{
   border-radius: 15px;
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  margin: auto;
+}
+
+.titleDisplay{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  gap: 8px;
 }
 
 .title {
   font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .btn{
