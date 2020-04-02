@@ -102,8 +102,10 @@ header img{
   margin-top: 50px;
 }
 
+
 .receita{
   width: 100%;
+  cursor: pointer;
 }
 
 .receita img{
@@ -129,6 +131,7 @@ footer{
   margin-top: 50px;
   padding: 23px;
   background: #EEEEEE;
+  padding-bottom: auto;
 }
 
 footer p{
@@ -175,20 +178,28 @@ footer p{
   font-size: 12px;
   color: #999999;
   cursor: pointer;
-
+  
 }
-
 
 .block__ingredients{
   display: none;
+  margin-left: 5px;
 }
 
-
-.active {
+.block__preparation{
   display: none;
+  margin-left: 5px;
+
 }
 
+.block__information{
+  display: none;
+  margin-left: 5px;
+
+}
 
 .pack{
-  display: flex;
+  display: grid;
 }
+
+

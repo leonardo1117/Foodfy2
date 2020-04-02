@@ -19,30 +19,35 @@
 
   <section class="container">
 
+
     <div class="single__recipe" id="{{recipes.title}}">
-      <img src={{recipe.image}} alt="Triplo bacon burger">
+      <img src={{recipe.image}} alt="Imagem da receita">
       <h2 class="receita__nome">{{recipe.title}}</h2>
       <h2 class="receita__por">{{recipe.author}}</h2>
 
+    </div>
 
+    <div class="title__ingredients pack">
+      <h2 class="title">Ingredientes</h2>
+      <h2 class="btn ingredients" id="btnIngredients" onclick="showInformation(blocoIngredientes, btnIngredients)">
+        Mostrar</h2>
 
-      <div class="title__ingredients pack">
-        <h2 class="title">Ingredientes</h2>
-        <h2 class="btn ingredients" onclick="showInformation()" id="showIngrediends">Mostrar</h2>
-      </div>
-
-      <div class="block__ingredients block">
+      <div class="block__ingredients">
         <ul>
           {% for recipeIngredients in recipe.ingredients %}
           <li>{{recipeIngredients}}</li>
           {%endfor%}
         </ul>
       </div>
-      <div class="title__preparation pack">
-        <h2 class="title">Modo de preparo</h1>
-          <h2 class="btn preparation">Mostrar</h2>
-      </div>
-      <div class="block preparo">
+    </div>
+
+    <div class="title__preparation pack">
+      <h2 class="title">Modo de preparo</h2>
+      <h2 class="btn preparation" id="btnPreparation" onclick="showInformation(blocoPreparacao, btnPreparation)">
+        Mostrar
+      </h2>
+
+      <div class="block__preparation">
 
         <ul>
           {% for recipePreparation in recipe.preparation %}
@@ -52,16 +57,18 @@
 
 
       </div>
-      <div class="title__information pack">
-        <h2 class="title">Informações adicionais</h1>
-          <h2 class="btn information">Mostrar</h2>
-      </div>
-      <div class="block info__adicionais">
+    </div>
+
+    <div class="title__information pack">
+      <h2 class="title">Informações adicionais</h2>
+      <h2 class="btn information" id="btnInformation" onclick="showInformation(blocoInformacoes, btnInformation)">
+        Mostrar
+      </h2>
+      <div class="block__information">
 
         <p>{{recipe.information}}</p>
 
       </div>
-
     </div>
 
 

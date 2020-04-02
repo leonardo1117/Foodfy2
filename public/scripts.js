@@ -1,6 +1,7 @@
 const recepies = document.querySelectorAll('.receita')
 
 
+//mostrando as receitas e os criadores com base nos objetos criados no arquivo data.js
 for (let receita of recepies) {
   const imgId = receita.getAttribute("id")
   const recepieName = receita.children[1].innerHTML
@@ -12,37 +13,54 @@ for (let receita of recepies) {
   })
 }
 
-const btnShow = document.getElementById(showIngrediends)
-const btnClose = document.querySelector('ingredients')
+
 const blocoIngredientes = document.querySelector('.block__ingredients')
+const blocoPreparacao = document.querySelector('.block__preparation')
+const blocoInformacoes = document.querySelector('.block__information')
 
 
-// if (blocoIngredientes.style.display != 'inital') {
-//   btnShow.addEventListener("click", function () {
-//     blocoIngredientes.classList.add('active')
-
-//     btnShow.innerHTML = 'Esconder'
-//   }
-
-// )}if(blocoIngredientes.style.display == 'inital'){
-//   btnShow.addEventListener("click", function () {
-//     blocoIngredientes.classList.remove('active')
-//     btnShow.innerHTML = 'Mostrar'
-//   })
-// }
-
-btnShow.addEventListener("click", function(){
-  console.log('it does work')
-})
+if(blocoInformacoes==''){
+  blocoInformacoes.style.display = none;
+}
 
 
-// function showInformation() {
+function showInformation(informationToShow, buttonClicked) {
 
-//   if (blocoIngredientes.style.display == 'none') {
-//     btnShow.addEventListener("click", function () {
-//       blocoIngredientes.style.display = 'initial'
-//       btnShow.innerHTML = 'Esconder'
+  if (informationToShow.style.display == 'none') {
+    buttonClicked.addEventListener("click", function () {
+      informationToShow.style.display = 'flex'
+      buttonClicked.innerHTML = 'Esconder'
+    })
+  } else {
+    buttonClicked.addEventListener("click", function () {
+      informationToShow.style.display = 'none'
+      buttonClicked.innerHTML = 'Mostrar'
+    })
+  }
+}
+
+
+
+
+
+
+
+
+
+//"FUNCIONANDO" com dois clicks e algo está errado com os parâmetros, os botões estão mostrando/escondendo outras divs
+// function showInformation(informationToShow){
+
+//   if(informationToShow.style.display == 'none'){
+//     btnClose.addEventListener("click", function () {
+//       informationToShow.style.display = 'initial'
+//       btnClose.innerHTML = 'Esconder'
+//     })
+//   }else{
+//     btnClose.addEventListener("click", function () {
+//       informationToShow.style.display = 'none'
+//       btnClose.innerHTML = 'Mostrar'
 //     })
 //   }
 // }
+
 
