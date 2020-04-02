@@ -38,6 +38,9 @@ header img{
 .links a{
   text-decoration: none;
   font-size: 16px;
+}
+
+.links :hover{
   font-weight: bold;
 }
 
@@ -104,7 +107,7 @@ header img{
 
 .receita img{
   border-radius: 15px;
-  width: 90%;
+  width: 100%;
 }
 
 .receita__nome{
