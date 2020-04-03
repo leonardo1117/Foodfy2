@@ -21,23 +21,9 @@ const titleInformacoes = document.querySelector('.title__information')
 
 
 //função de mostrar/esconder informações com os botões na frente dos tópicos da página
-function showInformation(informationToShow, buttonClicked) {
-
-    if (informationToShow.style.display == "") {
-      buttonClicked.addEventListener("click", function () {
-        informationToShow.style.display = 'flex'
-        buttonClicked.innerHTML = 'ESCONDER'
-        console.log('clicked')
-      })
-    } else {
-      buttonClicked.addEventListener("click", function () {
-        informationToShow.style.display = ""
-        buttonClicked.innerHTML = 'MOSTRAR'
-        console.log('clicked')
-
-      })
-    }
-  }
+function showInformation(informationToShow, buttonClicked){
+  informationToShow.style.display != "flex" ? (informationToShow.style.display = "flex", buttonClicked.innerHTML = "ESCONDER") : (informationToShow.style.display = "none", buttonClicked.innerHTML = "MOSTRAR") 
+}
 
 const paragrafoInformacao = document.getElementById('infoP')
 
@@ -47,6 +33,4 @@ window.onload = function verifyInfo() {
     titleInformacoes.style.display = 'none';
   }
 }
-
-
 
