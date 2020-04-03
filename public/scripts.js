@@ -23,7 +23,7 @@ const titleInformacoes = document.querySelector('.title__information')
 //função de mostrar/esconder informações com os botões na frente dos tópicos da página
 function showInformation(informationToShow, buttonClicked) {
 
-    if (informationToShow.style.display == 'none') {
+    if (informationToShow.style.display == "") {
       buttonClicked.addEventListener("click", function () {
         informationToShow.style.display = 'flex'
         buttonClicked.innerHTML = 'ESCONDER'
@@ -31,7 +31,7 @@ function showInformation(informationToShow, buttonClicked) {
       })
     } else {
       buttonClicked.addEventListener("click", function () {
-        informationToShow.style.display = 'none'
+        informationToShow.style.display = ""
         buttonClicked.innerHTML = 'MOSTRAR'
         console.log('clicked')
 
@@ -47,4 +47,6 @@ window.onload = function verifyInfo() {
     titleInformacoes.style.display = 'none';
   }
 }
+
+
 
