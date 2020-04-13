@@ -7,7 +7,7 @@ for (let receita of recepies) {
   const recepieName = receita.children[1].innerHTML
   const recepieBy = receita.children[2].innerHTML
   receita.addEventListener("click", function () {
-    window.location.href = `/recepie?id=${imgId}`
+    window.location.href = `/recipeInfo?id=${imgId}`
 
 
   })
