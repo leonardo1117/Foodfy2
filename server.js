@@ -4,7 +4,7 @@ const nunjucks = require('nunjucks')
 const server = express()
 const recipes = require('./data')
 
-server.set("view engine", "html")
+server.set("view engine", "njk")
 
 server.use(express.static('public'))
 
