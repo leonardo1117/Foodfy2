@@ -1,20 +1,20 @@
-const data = require('./data')
+const data = require('../data')
 
 
 exports.index = function (req, res) {
 
 
-  return res.render("index")
+  return res.render("user/index")
 }
 
 exports.about = function (req, res) {
 
 
-  return res.render("about")
+  return res.render("user/about")
 }
 
 exports.recipes = function (req, res) {
-  return res.render("recipes")
+  return res.render("user/recipes")
 }
 
 exports.recipeInfo = function (req, res) {
@@ -30,5 +30,5 @@ exports.recipeInfo = function (req, res) {
     return res.send("Receita não encontrada!")
   }
 
-  return res.render("recipeInfo", { recipe })
+  return res.render("user/recipeInfo", { recipe })
 }
