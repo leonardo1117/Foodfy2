@@ -45,6 +45,7 @@ header img{
   font-weight: bold;
 }
 
+
 /* === CONTAINER COM AS MELHORES RECEITAS === */
 
 .principal{
@@ -222,6 +223,18 @@ footer p{
 
 .hidden{
   display: none;
+}
+
+
+/* INDEX ADMIN */
+
+.header-admin{
+  background-color: #111111;
+  margin: 0px;
+}
+
+.header-admin img{
+  margin: 25px 230px;
 }
 
 
