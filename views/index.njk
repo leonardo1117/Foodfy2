@@ -1,25 +1,7 @@
-<!DOCTYPE html>
-<html>
+{% extends "layout.njk" %}
 
-<head>
-  <title>Foodfy - Home Page</title>
-  <link rel="stylesheet" href="/styles.css">
-
-</head>
-
-<body>
-
-  <header>
-    <img src="assets/logo.png" alt="Logo da Foodfy">
-    <div class="links">
-      <a href="/about">Sobre</a>
-      <a href="/recipes">Receitas</a>
-    </div>
-
-  </header>
+{%block content %}
   <section class="container">
-
-
 
     <div class="principal">
       <div class="principal__content">
@@ -27,7 +9,6 @@
         <h2>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro</h2>
       </div>
       <img src="/assets/chef.png" alt="">
-
 
     </div>
 
@@ -50,7 +31,8 @@
         <div class="receita">
           <img src="/assets/doce.png" alt="Docinhos pão-do-céu">
           <h2 class="receita__nome">Docinhos pão-do-céu</h2>
-          <h2 class="receita__por"> por Ricardo Golvea</h2>
+          <h2 class="receita__por">
+            por Ricardo Golvea</h2>
         </div>
 
         <div class="receita">
@@ -74,13 +56,4 @@
     </div>
 
   </section>
-
-  <footer>
-    <div class="footer__text">
-      <p>Todos os direitos reservados, receitas Foodfy.</p>
-    </div>
-  </footer>
-
-</body>
-
-</html>
+{% endblock %}

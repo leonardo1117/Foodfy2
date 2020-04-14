@@ -1,98 +1,40 @@
-<!DOCTYPE html>
-<html>
+{% extends "layout.njk" %}
 
-<head>
-  <link rel="stylesheet" href="styles.css">
-  <title>Sobre</title>
-</head>
-
-<body>
-  <header>
-
-    <a href="/"><img src="../assets/logo.png" alt="Logo da Foodfy"></a>
-    <div class="links">
-      <a href="/about">Sobre</a>
-      <a href="/recipes">Receitas</a>
-    </div>
-
-  </header>
-
+{% block content %}
   <section class="container">
     <div class="sobre__textos">
       <div class="wrapper__sobre">
         <h1>Sobre o Foodfy</h1>
         <p class="sobre__1">
-          Suspendisse placerat neque neque. Morbi dictum nulla non sapien rhoncus, et mattis erat commodo. Aliquam vel
-          lacus a justo mollis luctus. Proin vel auctor eros, sed eleifend nunc. Curabitur eget tincidunt risus. Mauris
-          malesuada facilisis magna, vitae volutap sapien tristique eu. Morbi metus nunc, interdum in erat placerat,
-          aliquam iaculis massa. Duis vulputate varius justo pharetra maximus. In vehicula enim nec nibh porta
-          tincindunt.
-          Vestibulum at ultrices turpis, non dictum metus. Vivamus lingula ex, semper vitae eros ut, euismod convallis
-          augue.
+          Suspendisse placerat neque neque. Morbi dictum nulla non sapien rhoncus, et mattis erat commodo. Aliquam vel lacus a justo mollis luctus. Proin vel auctor eros, sed eleifend nunc. Curabitur eget tincidunt risus. Mauris malesuada facilisis magna, vitae volutap sapien tristique eu. Morbi metus nunc, interdum in erat placerat, aliquam iaculis massa. Duis vulputate varius justo pharetra maximus. In vehicula enim nec nibh porta tincindunt. Vestibulum at ultrices turpis, non dictum metus. Vivamus lingula ex, semper vitae eros ut, euismod convallis augue.
         </p>
         <p>
-          Suspendisse placerat neque neque. Morbi dictum nulla non sapien rhoncus, et mattis erat commodo. Aliquam vel
-          lacus a justo mollis luctus. Proin vel auctor eros, sed eleifend nunc. Curabitur eget tincidunt risus. Mauris
-          malesuada facilisis magna, vitae volutap sapien tristique eu. In vehicula enim nec nibh porta tincindunt.
-          Vestibulum at ultrices turpis, non dictum metus. Vivamus lingula ex, semper vitae eros ut, euismod convallis
-          augue.
+          Suspendisse placerat neque neque. Morbi dictum nulla non sapien rhoncus, et mattis erat commodo. Aliquam vel lacus a justo mollis luctus. Proin vel auctor eros, sed eleifend nunc. Curabitur eget tincidunt risus. Mauris malesuada facilisis magna, vitae volutap sapien tristique eu. In vehicula enim nec nibh porta tincindunt. Vestibulum at ultrices turpis, non dictum metus. Vivamus lingula ex, semper vitae eros ut, euismod convallis augue.
         </p>
       </div>
 
       <div class="wrapper__comeco">
         <h1>Como tudo começou...</h1>
         <p class="sobre__1">
-          Suspendisse placerat neque neque. Morbi dictum nulla non sapien rhoncus, et mattis erat commodo. Aliquam vel
-          lacus a justo mollis luctus. Proin vel auctor eros, sed eleifend nunc. Curabitur eget tincidunt risus. Mauris
-          malealiquam iaculis massa. Duis vulputate varius justo pharetra maximus. In vehicula enim nec nibh porta
-          tincindunt.
-          Vestibulum at ultrices turpis, non dictum metus. Vivamus lingula ex, semper vitae eros ut, euismod convallis
-          augue.suada facilisis magna, vitae volutap sapien tristique eu. Morbi metus nunc, interdum in erat placerat,
-          
+          Suspendisse placerat neque neque. Morbi dictum nulla non sapien rhoncus, et mattis erat commodo. Aliquam vel lacus a justo mollis luctus. Proin vel auctor eros, sed eleifend nunc. Curabitur eget tincidunt risus. Mauris malealiquam iaculis massa. Duis vulputate varius justo pharetra maximus. In vehicula enim nec nibh porta tincindunt. Vestibulum at ultrices turpis, non dictum metus. Vivamus lingula ex, semper vitae eros ut, euismod convallis augue.suada facilisis magna, vitae volutap sapien tristique eu. Morbi metus nunc, interdum in erat placerat,
+
         </p>
         <p>
-          Suspendisse placerat neque neque. Morbi dictum nulla non sapien rhoncus, et mattis erat commodo. Aliquam vel
-          lacus a justo mollis luctus. Proin vel auctor eros, sed eleifend nunc. Curabitur eget tincidunt risus. Mauris
-          malesuada facilisis magna, vitae volutap sapien tristique eu. In vehicula enim nec nibh porta tincindunt.
-          Vestibulum at ultrices turpis, non dictum metus. Vivamus lingula ex, semper vitae eros ut, euismod convallis
-          augue.
+          Suspendisse placerat neque neque. Morbi dictum nulla non sapien rhoncus, et mattis erat commodo. Aliquam vel lacus a justo mollis luctus. Proin vel auctor eros, sed eleifend nunc. Curabitur eget tincidunt risus. Mauris malesuada facilisis magna, vitae volutap sapien tristique eu. In vehicula enim nec nibh porta tincindunt. Vestibulum at ultrices turpis, non dictum metus. Vivamus lingula ex, semper vitae eros ut, euismod convallis augue.
         </p>
       </div>
 
       <div class="wrapper__receitas">
         <h1>Nossas receitas</h1>
         <p class="sobre__1">
-          Suspendisse placerat neque neque. Morbi dictum nulla non sapien rhoncus, et mattis erat commodo. Aliquam vel
-          lacus a justo mollis luctus. Proin vel auctor eros, sed eleifend nunc. Curabitur eget tincidunt risus.
-          Mauris
-          malesuada facilisis magna, vitae volutap sapien tristique eu. Morbi metus nunc, interdum in erat placerat,
-          aliquam iaculis massa. Duis vulputate varius justo pharetra maximus. In vehicula enim nec nibh porta
-          tincindunt.
-          Vestibulum at ultrices turpis, non dictum metus. Vivamus lingula ex, semper vitae eros ut, euismod convallis
-          augue.
+          Suspendisse placerat neque neque. Morbi dictum nulla non sapien rhoncus, et mattis erat commodo. Aliquam vel lacus a justo mollis luctus. Proin vel auctor eros, sed eleifend nunc. Curabitur eget tincidunt risus. Mauris malesuada facilisis magna, vitae volutap sapien tristique eu. Morbi metus nunc, interdum in erat placerat, aliquam iaculis massa. Duis vulputate varius justo pharetra maximus. In vehicula enim nec nibh porta tincindunt. Vestibulum at ultrices turpis, non dictum metus. Vivamus lingula ex, semper vitae eros ut, euismod convallis augue.
         </p>
         <p>
-          Suspendisse placerat neque neque. Morbi dictum nulla non sapien rhoncus, et mattis erat commodo. Aliquam vel
-          lacus a justo mollis luctus. Proin vel auctor eros, sed eleifend nunc. Curabitur eget tincidunt risus.
-          Mauris
-          malesuada facilisis magna, vitae volutap sapien tristique eu. In vehicula enim nec nibh porta tincindunt.
-          Vestibulum at ultrices turpis, non dictum metus. Vivamus lingula ex, semper vitae eros ut, euismod convallis
-          augue.
+          Suspendisse placerat neque neque. Morbi dictum nulla non sapien rhoncus, et mattis erat commodo. Aliquam vel lacus a justo mollis luctus. Proin vel auctor eros, sed eleifend nunc. Curabitur eget tincidunt risus. Mauris malesuada facilisis magna, vitae volutap sapien tristique eu. In vehicula enim nec nibh porta tincindunt. Vestibulum at ultrices turpis, non dictum metus. Vivamus lingula ex, semper vitae eros ut, euismod convallis augue.
         </p>
       </div>
     </div>
 
   </section>
 
-
-
-  <footer>
-    <div class="footer__text">
-      <p>Todos os direitos reservados, receitas Foodfy.</p>
-    </div>
-  </footer>
-
-
-</body>
-
-</html>
+{% endblock %}
