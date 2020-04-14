@@ -11,8 +11,7 @@ body{
 }
 /* === CENTRALIZANDO TODOS OS ELEMENTOS === */
 .container{   
-    margin: 0 230px;
-    
+    margin: 0 230px;    
 }
 
 header{
@@ -226,7 +225,7 @@ footer p{
 }
 
 
-/* INDEX ADMIN */
+/* LAYOUT ADMIN */
 
 .header-admin{
   background-color: #111111;
@@ -235,6 +234,41 @@ footer p{
 
 .header-admin img{
   margin: 25px 230px;
+}
+
+/* ADMIN CREATE RECIPE */
+
+.main-title{
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 12%;
+}
+
+.main-title h2{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.main-title button{
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #6558C3;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.field{
+  display: block;
+  margin-top: 30px;
+}
+
+.field h3{
+  font-size: 16px;
+}
+
+.field :last-child{
+  color: #6558C3;
+  cursor: pointer;
 }
 
 
