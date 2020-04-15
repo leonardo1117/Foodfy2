@@ -1,6 +1,5 @@
 const recepies = document.querySelectorAll('.receita')
 
-
 //mostrando as receitas e os criadores com base nos objetos criados no arquivo data.js
 for (let receita of recepies) {
   const imgId = receita.getAttribute("id")
@@ -18,8 +17,6 @@ const blocoPreparacao = document.querySelector('.block__preparation')
 const blocoInformacoes = document.querySelector('.block__information')
 const titleInformacoes = document.querySelector('.title__information')
 
-
-
 //função de mostrar/esconder informações com os botões na frente dos tópicos da página
 function showInformation(informationToShow, buttonClicked){
   informationToShow.style.display != "flex" ? (informationToShow.style.display = "flex", buttonClicked.innerHTML = "ESCONDER") : (informationToShow.style.display = "none", buttonClicked.innerHTML = "MOSTRAR") 
@@ -33,4 +30,8 @@ window.onload = function verifyInfo() {
     titleInformacoes.style.display = 'none';
   }
 }
+
+
+// ADICIONAR NOVO CAMPO COM BOTÃO 
+
 

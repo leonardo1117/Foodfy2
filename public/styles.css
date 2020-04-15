@@ -266,17 +266,21 @@ footer p{
   font-size: 16px;
 }
 
-.field h2{
+.field button{
   font-size: 16px;
   color: #6558C3;
   cursor: pointer;
+  background-color: #FFFFFF;
+  font-weight: bold;
+  outline: none;
 }
 
 .field input{
   width: 100%;
-  height: 50%;
   outline: none;
-  border: 1px solid rgba(0,0,0,0.3);
+  border: 1px solid rgba(0,0,0,0.2);
   border-radius: 4px;
+  font-size: 16px;
+  padding: 10px;
 }
 
