@@ -266,9 +266,17 @@ footer p{
   font-size: 16px;
 }
 
-.field :last-child{
+.field h2{
+  font-size: 16px;
   color: #6558C3;
   cursor: pointer;
 }
 
+.field input{
+  width: 100%;
+  height: 50%;
+  outline: none;
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
 
