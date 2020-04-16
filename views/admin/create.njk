@@ -3,34 +3,7 @@
 {%block content %}
 
   <form class="container" action="/admin/recipes" method="POST">
-    <div class="main-title">
-      <h2>Criando Receita</h2>
-      <button type="submit">Salvar receita</button>
-    </div>
-
-    <div class="field">
-      <h3>Imagem da receita</h3>
-      <input type="text" name="recipe_img" placeholder="http://">
-    </div>
-
-    <div class="field ingredients">
-      <h3>Ingredientes</h3>
-      <input type="text" name="ingredients[]">
-      <button type="button" id="add-ingredient">Adicionar novo ingrediente</button>
-    </div>
-
-    <div class="field preparation">
-      <h3>Modo de preparo</h3>
-      <input type="text" name="preparation[]">
-      <button type="button" id="add-step">Adicionar novo passo</button>
-    </div>
-
-    <div class="field">
-      <h3>Informações adicionais</h3>
-      <textarea name="info" rows="10" ></textarea>
-
-    </div>
-
+    {% include "admin/fields.njk" %}
   </form>
 
 {% endblock %}
