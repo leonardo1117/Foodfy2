@@ -23,12 +23,23 @@ exports.post = function (req, res) {
     }
   }
 
-  // let id = 1
-  // const lastRecipe = data.recipes[data.recipes.length - 1]
+  let id = 1
+  const lastRecipe = data.recipes[data.recipes.length - 1]
 
-  // if(lastRecipe){
-  //   id = lastRecipe.id + 1
-  // }
+  if(lastRecipe){
+    id = lastRecipe.id + 1
+  }
+
+  data.recipes.push({
+    id,
+    ...req.body,
+  })
+
+  fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err){
+    if(err) return res.send("Write file error")
+  })
+
+  return res.send("Usuário cadastrado")
 
 }
 

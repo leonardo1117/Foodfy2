@@ -1,3 +1,28 @@
 {
-  "recipes": []
+  "recipes": [
+    {
+      "id": 1,
+      "recipe_img": "http://google.com",
+      "ingredients": [
+        "Ovo"
+      ],
+      "preparation": [
+        "Não sei"
+      ],
+      "info": "Mas pretendo descobrir"
+    },
+    {
+      "id": 2,
+      "recipe_img": "http://google.com",
+      "ingredients": [
+        "Ovo",
+        "Salada"
+      ],
+      "preparation": [
+        "Não sei",
+        "Ainda continuo sem saber"
+      ],
+      "info": "Mas pretendo descobrir"
+    }
+  ]
 }
