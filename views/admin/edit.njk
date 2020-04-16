@@ -2,7 +2,46 @@
 
 {%block content %}
   <form action="" method="post" class="container">
-    {% include "admin/fields.njk" %}
+
+    <div class="main-title">
+      <h2>Criando Receita</h2>
+      <div class="edit__buttons">
+        <button type="button" id="delete-button">Deletar</button>
+        <button type="submit">Salvar receita</button>
+      </div>
+    </div>
+
+    <div class="field">
+      <h3>Imagem da receita</h3>
+      <input type="text" name="image_url" placeholder="http://" value="{{recipe.image_url}}">
+    </div>
+
+    <div class="field" id="ingredients">
+      <h3>Ingredientes</h3>
+      <div class="ingredient">
+        {% for ingredient in recipe.ingredients %}
+          <input type="text" name="ingredients[]" value="{{ingredient}}" id="inputIngredient">
+        {% endfor %}
+      </div>
+      <button type="button" id="add-ingredient">Adicionar novo ingrediente</button>
+    </div>
+
+    <div class="field preparation">
+      <h3>Modo de preparo</h3>
+      <div class="step">
+        {% for step in recipe.preparation %}
+          <input type="text" name="preparation[]" id="inputStep" value="{{step}}">
+        {% endfor %}
+      </div>
+      <button type="button" id="add-step">Adicionar novo passo</button>
+    </div>
+
+    <div class="field">
+      <h3>Informações adicionais</h3>
+      <textarea name="info" rows="10" value="{{recipe.info}}"></textarea>
+
+    </div>
+
   </form>
 
 {% endblock %}

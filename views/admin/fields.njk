@@ -5,18 +5,20 @@
 
 <div class="field">
   <h3>Imagem da receita</h3>
-  <input type="text" name="recipe_img" placeholder="http://">
+  <input type="text" name="image_url" placeholder="http://">
 </div>
 
-<div class="field ingredients">
+<div class="field" id="ingredients">
   <h3>Ingredientes</h3>
-  <input type="text" name="ingredients[]">
+  <div class="ingredient">
+    <input type="text" name="ingredients[]"id="inputIngredient">
+  </div>
   <button type="button" id="add-ingredient">Adicionar novo ingrediente</button>
 </div>
 
 <div class="field preparation">
   <h3>Modo de preparo</h3>
-  <input type="text" name="preparation[]">
+  <input type="text" name="preparation[]" id="inputStep">
   <button type="button" id="add-step">Adicionar novo passo</button>
 </div>
 

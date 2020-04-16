@@ -2,18 +2,7 @@
   "recipes": [
     {
       "id": 1,
-      "recipe_img": "http://google.com",
-      "ingredients": [
-        "Ovo"
-      ],
-      "preparation": [
-        "Não sei"
-      ],
-      "info": "Mas pretendo descobrir"
-    },
-    {
-      "id": 2,
-      "recipe_img": "http://google.com",
+      "image_url": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/asinha.png",
       "ingredients": [
         "Ovo",
         "Salada"
@@ -23,19 +12,6 @@
         "Ainda continuo sem saber"
       ],
       "info": "Mas pretendo descobrir"
-    },
-    {
-      "id": 3,
-      "recipe_img": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/asinha.png",
-      "ingredients": [
-        "Asa de frango",
-        "Alho"
-      ],
-      "preparation": [
-        "Frita essa budega",
-        "Coloca no prato"
-      ],
-      "info": "mano é só isso mesmo"
     }
   ]
 }

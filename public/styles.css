@@ -295,8 +295,16 @@ footer p{
 
 .top__info{
   display: grid;
-  grid-template-columns: 1fr 12%;
+  grid-template-columns: 1fr 1fr;
   margin-top: 50px;
   margin-bottom: 25px;
+}
+
+/* ADMIN EDIT RECIPE */
+
+.edit__buttons{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
 }
 

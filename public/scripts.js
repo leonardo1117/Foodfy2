@@ -33,26 +33,28 @@ window.onload = function verifyInfo() {
 
 
 // ADICIONAR NOVO CAMPO COM BOTÃO 
-
 const btnAddIngredient = document.getElementById('add-ingredient')
-const ingredientsForm = document.querySelector('.ingredients')
+const inputIngredient = document.getElementById('inputIngredient')
+
 
 btnAddIngredient.addEventListener("click", function (event) {
   let newIngredient = document.createElement('input')
   newIngredient.name = "ingredients[]"
   newIngredient.placeholder = "Novo ingrediente"
-  ingredientsForm.appendChild(newIngredient)
-  this.parentElement.insertBefore(newIngredient, this.parentElement.children[2])
+  inputIngredient.appendChild(newIngredient)
+  this.parentElement.insertBefore(newIngredient, this.parentElement.lastElementChild)
 
 })
 
 const btnAddStep = document.getElementById('add-step')
-const preparationForm = document.querySelector('.preparation')
+const inputStep = document.getElementById('inputStep')
+
 
 btnAddStep.addEventListener("click", function () {
   let newStep = document.createElement('input')
   newStep.name = "preparation[]"
   newStep.placeholder = "Novo passo"
-  preparationForm.appendChild(newStep)
-  this.parentElement.insertBefore(newStep, this.parentElement.children[2])
+  inputStep.appendChild(newStep)
+  this.parentElement.insertBefore(newStep, this.parentElement.lastElementChild)
 })
+
