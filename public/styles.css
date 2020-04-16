@@ -295,7 +295,7 @@ footer p{
 
 .top__info{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
   margin-top: 50px;
   margin-bottom: 25px;
 }
@@ -304,7 +304,10 @@ footer p{
 
 .edit__buttons{
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
+}
+
+.edit__buttons button {
 }
 
