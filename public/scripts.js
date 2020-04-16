@@ -34,4 +34,13 @@ window.onload = function verifyInfo() {
 
 // ADICIONAR NOVO CAMPO COM BOTÃO 
 
+const btnAddIngredient = document.getElementById('add-ingredient')
+const btnAddStep = document.getElementById('add-step')
+const ingredientsForm = document.querySelector('.ingredients')
 
+btnAddIngredient.addEventListener("click", function(event){
+  let newField = document.createElement('input')
+  newField.name = "ingredients[]"
+  newField.placeholder = "Novo ingrediente"
+  ingredientsForm.appendChild(newField)
+})
