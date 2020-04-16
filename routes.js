@@ -15,6 +15,7 @@ routes.get("/recipeInfo", recipesController.recipeInfo)
 // //rotas admin
 routes.get("/admin/recipes", adminController.index)
 routes.get("/admin/recipes/create", adminController.create)
+routes.post("/admin", adminController.post)
 routes.get("/admin/recipes/:id", adminController.show)
 routes.get("/admin/recipes/:id/edit", adminController.edit)
 
