@@ -249,12 +249,14 @@ footer p{
   font-weight: bold;
 }
 
-.main-title button{
+.main-title button,
+.top__info button{
   font-size: 16px;
   border-radius: 4px;
   background-color: #6558C3;
   color: #FFFFFF;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .field{
@@ -287,5 +289,14 @@ footer p{
 
 .field textarea{
   resize: none;
+}
+
+/* ADMIN SHOW RECIPE */
+
+.top__info{
+  display: grid;
+  grid-template-columns: 1fr 12%;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 

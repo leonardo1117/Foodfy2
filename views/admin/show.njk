@@ -3,60 +3,65 @@
 {%block content %}
   <section class="container">
 
+    <div class="top__info">
+      <h2>Receita: Receita</h2>
+      <button>Editar receita</button>
+    </div>
+
     <div class="wrapper-recipe">
       <div class="single__recipe" id="{{recipes.title}}">
-        <img src={{recipe.recipe_img}} }="}" id="recipeImg" alt="Imagem da receita">
+        <img src={{recipe.recipe_img}} id="recipeImg" alt="Imagem da receita">
         <h2 class="receita__nome" id="recipeTitle">Receita</h2>
         <h2 class="receita__por" id="recipeBy">por Leonardo</h2>
 
+      </div>
+
+      <div class="title__ingredients pack">
+        <div class="titleDisplay">
+          <h2 class="title">Ingredientes</h2>
+          <h2 class="btn ingredients" id="btnIngredients" onclick="showInformation(blocoIngredientes, btnIngredients)">
+            MOSTRAR</h2>
         </div>
 
-        <div class="title__ingredients pack">
-          <div class="titleDisplay">
-            <h2 class="title">Ingredientes</h2>
-            <h2 class="btn ingredients" id="btnIngredients" onclick="showInformation(blocoIngredientes, btnIngredients)">
-              MOSTRAR</h2>
+        <div class="block__ingredients">
+          <ul>
+            {% for ingredient in recipe.ingredients %}
+              <li>{{ingredient}}</li>
+              {%endfor%}
+            </ul>
           </div>
+        </div>
 
-          <div class="block__ingredients">
+        <div class="title__preparation pack">
+          <div class="titleDisplay">
+            <h2 class="title">Modo de preparo</h2>
+            <h2 class="btn preparation" id="btnPreparation" onclick="showInformation(blocoPreparacao, btnPreparation)">
+              MOSTRAR
+            </h2>
+          </div>
+          <div class="block__preparation">
             <ul>
-              {% for ingredient in recipe.ingredients %}
-                <li>{{ingredient}}</li>
+              {% for step in recipe.preparation %}
+                <li>{{step}}</li>
                 {%endfor%}
               </ul>
+
             </div>
           </div>
 
-          <div class="title__preparation pack">
+          <div class="title__information pack">
             <div class="titleDisplay">
-              <h2 class="title">Modo de preparo</h2>
-              <h2 class="btn preparation" id="btnPreparation" onclick="showInformation(blocoPreparacao, btnPreparation)">
+              <h2 class="title">Informações adicionais</h2>
+              <h2 class="btn information" id="btnInformation" onclick="showInformation(blocoInformacoes, btnInformation)">
                 MOSTRAR
               </h2>
             </div>
-            <div class="block__preparation">
-              <ul>
-                {% for step in recipe.preparation %}
-                  <li>{{step}}</li>
-                  {%endfor%}
-                </ul>
-
-              </div>
-            </div>
-
-            <div class="title__information pack">
-              <div class="titleDisplay">
-                <h2 class="title">Informações adicionais</h2>
-                <h2 class="btn information" id="btnInformation" onclick="showInformation(blocoInformacoes, btnInformation)">
-                  MOSTRAR
-                </h2>
-              </div>
-              <div class="block__information">
-                <p id="infoP">{{recipe.info}}</p>
-              </div>
+            <div class="block__information">
+              <p id="infoP">{{recipe.info}}</p>
             </div>
           </div>
+        </div>
 
-        </section>
+      </section>
 
-      {% endblock %}
+    {% endblock %}
