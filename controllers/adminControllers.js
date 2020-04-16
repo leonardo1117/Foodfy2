@@ -26,7 +26,7 @@ exports.post = function (req, res) {
   let id = 1
   const lastRecipe = data.recipes[data.recipes.length - 1]
 
-  if(lastRecipe){
+  if (lastRecipe) {
     id = lastRecipe.id + 1
   }
 
@@ -35,18 +35,30 @@ exports.post = function (req, res) {
     ...req.body,
   })
 
-  fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err){
-    if(err) return res.send("Write file error")
+  fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
+    if (err) return res.send("Write file error")
   })
 
-  return res.send("Usuário cadastrado")
+  return res.redirect("/admin/index")
 
 }
 
 exports.show = function (req, res) {
 
+  const { id } = req.params
 
-  return res.render('admin/show')
+  const foundRecipe = data.recipes.find(function (recipe) {
+    return recipe.id == id
+  })
+
+  if (!foundRecipe) return res.send("Recipe not found!")
+
+  const recipe = {
+    ...foundRecipe
+  }
+
+
+  return res.render('admin/show', { recipe })
 }
 
 exports.edit = function (req, res) {
