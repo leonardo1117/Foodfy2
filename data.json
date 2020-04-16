@@ -23,6 +23,19 @@
         "Ainda continuo sem saber"
       ],
       "info": "Mas pretendo descobrir"
+    },
+    {
+      "id": 3,
+      "recipe_img": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/asinha.png",
+      "ingredients": [
+        "Asa de frango",
+        "Alho"
+      ],
+      "preparation": [
+        "Frita essa budega",
+        "Coloca no prato"
+      ],
+      "info": "mano é só isso mesmo"
     }
   ]
 }

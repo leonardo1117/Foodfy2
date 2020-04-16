@@ -39,7 +39,7 @@ exports.post = function (req, res) {
     if (err) return res.send("Write file error")
   })
 
-  return res.redirect("/admin/index")
+  return res.redirect("/admin/recipes")
 
 }
 
