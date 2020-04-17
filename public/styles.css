@@ -300,6 +300,10 @@ footer p{
   margin-bottom: 25px;
 }
 
+.top__info button{
+  padding: 8px 16px;
+}
+
 /* ADMIN EDIT RECIPE */
 
 .edit__buttons{
