@@ -1,15 +1,18 @@
 {
   "recipes": [
     {
-      "id": 1,
+      "id": "1",
       "image_url": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/asinha.png",
       "ingredients": [
         "Ovo",
-        "Salada"
+        "Salada",
+        "Leite"
       ],
       "preparation": [
         "Não sei",
-        "Ainda continuo sem saber"
+        "Ainda continuo sem saber",
+        "Coloca no prato",
+        ""
       ],
       "info": "Mas pretendo descobrir"
     }
