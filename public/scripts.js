@@ -33,28 +33,52 @@ window.onload = function verifyInfo() {
 
 
 // ADICIONAR NOVO CAMPO COM BOTÃO 
-const btnAddIngredient = document.getElementById('add-ingredient')
-const inputIngredient = document.getElementById('inputIngredient')
+// const btnAddIngredient = document.getElementById('add-ingredient')
+// const inputIngredient = document.getElementById('inputIngredient')
+// const ingredient = document.querySelector('.ingredient')
 
 
-btnAddIngredient.addEventListener("click", function (event) {
-  let newIngredient = document.createElement('input')
-  newIngredient.name = "ingredients[]"
-  newIngredient.placeholder = "Novo ingrediente"
-  inputIngredient.appendChild(newIngredient)
-  this.parentElement.insertBefore(newIngredient, this.parentElement.lastElementChild)
 
-})
+// btnAddIngredient.addEventListener("click", function (event) {
+//   if (ingredient.lastChild != "") {
+//     let newIngredient = document.createElement('input')
+//     newIngredient.name = "ingredients[]"
+//     newIngredient.placeholder = "Novo ingrediente"
+//     ingredient.appendChild(newIngredient)
+//     this.parentElement.insertBefore(newIngredient, this.parentElement.lastElementChild)
+//   }
+// })
 
-const btnAddStep = document.getElementById('add-step')
-const inputStep = document.getElementById('inputStep')
+// const btnAddStep = document.getElementById('add-step')
+// const inputStep = document.getElementById('inputStep')
 
 
-btnAddStep.addEventListener("click", function () {
-  let newStep = document.createElement('input')
-  newStep.name = "preparation[]"
-  newStep.placeholder = "Novo passo"
-  inputStep.appendChild(newStep)
-  this.parentElement.insertBefore(newStep, this.parentElement.lastElementChild)
-})
+// btnAddStep.addEventListener("click", function () {
+//   let newStep = document.createElement('input')
+//   newStep.name = "preparation[]"
+//   newStep.placeholder = "Novo passo"
+//   inputStep.appendChild(newStep)
+//   this.parentElement.insertBefore(newStep, this.parentElement.lastElementChild)
+// })
 
+function addIngredient() {
+  const ingredients = document.querySelector("#ingredients");
+  const fieldContainer = document.querySelectorAll(".ingredient");
+  const inputIngredient = document.getElementById('inputIngredient')
+ 
+  // Realiza um clone do último ingrediente adicionado
+  const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
+
+
+  // Não adiciona um novo input se o último tem um valor vazio
+  if (newField.children[0].value == "") return false;
+
+  // Deixa o valor do input vazio
+  newField.children[0].value = "";
+  ingredients.appendChild(newField);
+  // ingredients.insertBefore(newField, fieldContainer.nextSibling)
+}
+
+document
+  .querySelector("#add-ingredient")
+  .addEventListener("click", addIngredient)
