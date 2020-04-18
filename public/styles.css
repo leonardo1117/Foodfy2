@@ -259,6 +259,10 @@ footer p{
   cursor: pointer;
 }
 
+.main-title button{
+  padding: 12px 28px;
+}
+
 .field{
   display: block;
   margin-top: 30px;
@@ -313,12 +317,14 @@ footer p{
   gap: 10px;
 }
 
-.edit__buttons :last-child {
+.edit__buttons :first-child {
   padding: 8px 32px;
 }
 
+/* 
+  BOTÃO DE EXLUIR
 .edit__buttons :first-child {
   padding: 8px 32px;
   background-color: lightcoral;
 }
-
+ */

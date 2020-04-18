@@ -32,7 +32,7 @@ window.onload = function verifyInfo() {
 }
 
 
-// ADICIONAR NOVO CAMPO COM BOTÃO 
+// ADICIONAR NOVO CAMPO COM BOTÃO --- TESTE
 // const btnAddIngredient = document.getElementById('add-ingredient')
 // const inputIngredient = document.getElementById('inputIngredient')
 // const ingredient = document.querySelector('.ingredient')
@@ -61,13 +61,10 @@ window.onload = function verifyInfo() {
 //   this.parentElement.insertBefore(newStep, this.parentElement.lastElementChild)
 // })
 
-function addIngredient() {
-  const ingredients = document.querySelector("#ingredients");
-  const fieldContainer = document.querySelectorAll(".ingredient");
-  const inputIngredient = document.getElementById('inputIngredient')
- 
+function addInput(mainDiv, inputDiv) {
+
   // Realiza um clone do último ingrediente adicionado
-  const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
+  const newField = mainDiv[mainDiv.length - 1].cloneNode(true);
 
 
   // Não adiciona um novo input se o último tem um valor vazio
@@ -75,10 +72,23 @@ function addIngredient() {
 
   // Deixa o valor do input vazio
   newField.children[0].value = "";
-  ingredients.appendChild(newField);
-  // ingredients.insertBefore(newField, fieldContainer.nextSibling)
+  inputDiv.appendChild(newField);
 }
+
+const ingredients = document.querySelector("#ingredients");
+const fieldContainer = document.querySelectorAll(".ingredient");
 
 document
   .querySelector("#add-ingredient")
-  .addEventListener("click", addIngredient)
+  .addEventListener("click", () => {
+    addInput(fieldContainer, ingredients)
+  })
+
+const preparation = document.querySelector('#preparation')
+const steps = document.querySelector('.steps')
+
+document
+  .querySelector("#add-step")
+  .addEventListener("click", () => {
+    addInput(steps, preparation)
+  })
