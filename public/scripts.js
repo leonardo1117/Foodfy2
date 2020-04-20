@@ -66,8 +66,6 @@ function addInput(mainDiv, inputDiv) {
   // Realiza um clone do último ingrediente adicionado
   const newField = mainDiv[mainDiv.length - 1].cloneNode(true);
 
-  const conteudo = newField.innerHTML
-  alert(conteudo)
   // Não adiciona um novo input se o último tem um valor vazio
   if (newField.children[0].value == "") return false;
 

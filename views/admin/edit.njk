@@ -4,6 +4,7 @@
   <section class="container">
     <form action="/admin/recipes?_method=DELETE" method="POST">
       <button type="submit" id="delete-button">Deletar</button>
+      <input type="hidden" name="id" value="{{recipe.id}}">
     </form>
 
     <form action="/admin/recipes?_method=PUT" method="POST">
