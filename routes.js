@@ -20,5 +20,6 @@ routes.get("/admin/recipes/:id", adminController.show)
 routes.get("/admin/recipes/:id/edit", adminController.edit)
 
 routes.put("/admin/recipes", adminController.put)
+routes.delete("/admin/recipes", adminController.delete)
 
 module.exports = routes
