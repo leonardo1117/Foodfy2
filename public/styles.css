@@ -241,7 +241,8 @@ footer p{
 .main-title{
   margin-top: 50px;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto auto;
+  gap: 10px;
 }
 
 .main-title h2{
@@ -250,7 +251,8 @@ footer p{
 }
 
 .main-title button,
-.top__info button{
+.top__info button,
+#delete-button button{
   font-size: 16px;
   border-radius: 4px;
   background-color: #6558C3;
@@ -311,20 +313,12 @@ footer p{
 
 /* ADMIN EDIT RECIPE */
 
-.edit__buttons{
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 10px;
-}
-
-.edit__buttons :first-child {
+#save-button button {
   padding: 8px 32px;
 }
 
-/* 
-  BOTÃO DE EXLUIR
-.edit__buttons :first-child {
+#delete-button button {
   padding: 8px 32px;
-  background-color: lightcoral;
+  background-color: #DC4747;
 }
- */
+
