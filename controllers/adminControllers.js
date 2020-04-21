@@ -30,9 +30,17 @@ exports.post = function (req, res) {
     id = lastRecipe.id + 1
   }
 
+
+
   data.recipes.push({
     id,
     ...req.body,
+    ingredients: req.body.ingredients.filter(function (valor) {
+      return valor != ""
+    }),
+    preparation: req.body.preparation.filter(function (valor) {
+      return valor != ""
+    }),
   })
 
   fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
@@ -52,6 +60,10 @@ exports.show = function (req, res) {
   })
 
   if (!foundRecipe) return res.send("Recipe not found!")
+
+  foundRecipe.ingredients = foundRecipe.ingredients.filter(function (valor) {
+    return valor !== " "
+  })
 
   const recipe = {
     ...foundRecipe,

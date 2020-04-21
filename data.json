@@ -11,8 +11,7 @@
       "preparation": [
         "Não sei",
         "Ainda continuo sem saber",
-        "Coloca no prato",
-        ""
+        "Coloca no prato"
       ],
       "info": "Mas pretendo descobrir"
     },
@@ -26,6 +25,17 @@
         "Coloca no prato"
       ],
       "info": "adsasdsadasd"
+    },
+    {
+      "id": 3,
+      "image_url": "adssadsda",
+      "ingredients": [
+        "aa"
+      ],
+      "preparation": [
+        "assads"
+      ],
+      "info": "assdads"
     }
   ]
 }
