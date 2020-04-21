@@ -1,7 +1,7 @@
 {
   "recipes": [
     {
-      "id": "1",
+      "id": 1,
       "image_url": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/asinha.png",
       "ingredients": [
         "Ovo",
@@ -15,6 +15,17 @@
         ""
       ],
       "info": "Mas pretendo descobrir"
+    },
+    {
+      "id": 2,
+      "image_url": "http://google.com",
+      "ingredients": [
+        "aaa"
+      ],
+      "preparation": [
+        "Coloca no prato"
+      ],
+      "info": "adsasdsadasd"
     }
   ]
 }

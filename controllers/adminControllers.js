@@ -97,6 +97,7 @@ exports.put = function (req, res) {
   const recipe = {
     ...foundRecipe,
     ...req.body,
+    id: Number(req.body.id)
   }
 
   data.recipes[index] = recipe
