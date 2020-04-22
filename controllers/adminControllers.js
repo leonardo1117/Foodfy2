@@ -14,14 +14,7 @@ exports.create = function (req, res) {
 }
 
 exports.post = function (req, res) {
-
-  const keys = Object.keys(req.body)
-
-  for (key of keys) {
-    if (req.body[key] == "") {
-      return res.send('Por favor, preencha todos os campos para enviar a receita!')
-    }
-  }
+ 
 
   let id = 1
   const lastRecipe = data.recipes[data.recipes.length - 1]
