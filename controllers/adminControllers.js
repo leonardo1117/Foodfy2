@@ -112,11 +112,7 @@ exports.put = function (req, res) {
   })
 
   return res.redirect(`/admin/recipes/${id}`)
-
-
-
-
-
+  
 }
 
 exports.delete = function (req, res) {
