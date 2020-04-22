@@ -280,7 +280,8 @@ footer p{
 }
 
 #add-ingredient,
-#add-step{
+#add-step,
+.recipe-info button{
   font-size: 16px;
   color: #6558C3;
   cursor: pointer;
@@ -352,10 +353,14 @@ footer p{
 
 .recipe-info :first-child{
   font-size: 18px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .recipe-info :nth-child(2) {
   font-size: 14px;
   color: #777777;
+}
+
+.recipe-info :last-child{
+  font-size: 14px;
 }
