@@ -14,39 +14,6 @@
         "Coloca no prato"
       ],
       "info": "Mas pretendo descobrir"
-    },
-    {
-      "id": 2,
-      "image_url": "http://google.com",
-      "ingredients": [
-        "aaa"
-      ],
-      "preparation": [
-        "Coloca no prato"
-      ],
-      "info": "adsasdsadasd"
-    },
-    {
-      "id": 3,
-      "image_url": "adssadsda",
-      "ingredients": [
-        "aa"
-      ],
-      "preparation": [
-        "assads"
-      ],
-      "info": "assdads"
-    },
-    {
-      "id": 4,
-      "image_url": "http://google.com",
-      "ingredients": [
-        "aaa"
-      ],
-      "preparation": [
-        "aaaa"
-      ],
-      "info": ""
     }
   ]
 }
