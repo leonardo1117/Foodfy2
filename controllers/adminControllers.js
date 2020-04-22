@@ -4,7 +4,7 @@ const data = require('../data.json')
 exports.index = function (req, res) {
 
 
-  return res.render('admin/index')
+  return res.render('admin/index', { recipes: data.recipes })
 }
 
 exports.create = function (req, res) {
@@ -14,7 +14,7 @@ exports.create = function (req, res) {
 }
 
 exports.post = function (req, res) {
- 
+
 
   let id = 1
   const lastRecipe = data.recipes[data.recipes.length - 1]
@@ -112,7 +112,7 @@ exports.put = function (req, res) {
   })
 
   return res.redirect(`/admin/recipes/${id}`)
-  
+
 }
 
 exports.delete = function (req, res) {

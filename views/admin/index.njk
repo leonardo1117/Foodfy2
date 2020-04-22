@@ -1,6 +1,29 @@
 {% extends "layoutAdm.njk" %}
 
 {%block content %}
-  <section class="container"></section>
+  <section class="container">
+
+    <div class="manage-recipes-title">
+      <h2>Gerenciar receitas</h2>
+    </div>
+
+    <div class="recipe-list">
+      {% for recipe in recipes %}
+
+        <div class="recipe-box">
+
+          <div class="recipe-img">
+            <img src="{{recipe.image_url}}" alt="Triplo bacon burger">
+          </div>
+          <div class="recipe-info">
+            <h2>Nome da receita</h2>
+            <h2>por Jorge Relato</h2>
+            <button>Visualizar</button>
+          </div>
+        </div>
+
+      {% endfor %}
+    </div>
+  </section>
 
 {% endblock %}
