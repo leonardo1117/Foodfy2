@@ -8,10 +8,13 @@
 
 body{
     font-family: 'Roboto', sans-serif;
+    position: relative;
+    padding-bottom: 74px;
+    min-height: 100vh;
 }
 /* === CENTRALIZANDO TODOS OS ELEMENTOS === */
 .container{   
-    margin: 0 230px;    
+    margin: 0 230px 50px;    
 }
 
 header{
@@ -24,7 +27,6 @@ header{
 
 header img{
   position: relative;
-
 }
 
 .links{
@@ -99,11 +101,6 @@ header img{
   cursor: pointer;
 }
 
-.receita:hover{
-  transform: scale(1.1);
-  transition: transform 200ms linear;
-}
-
 .receita img{
   border-radius: 15px;
   width: 100%;
@@ -123,9 +120,11 @@ header img{
 /* === FOOTER === */
 
 footer{
-  margin-top: 50px;
-  padding: 23px;
+  padding: 23px 0 23px;
   background: #EEEEEE;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 footer p{
