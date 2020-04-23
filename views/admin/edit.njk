@@ -24,23 +24,23 @@
 
       <div class="field" id="ingredients">
         <h3>Ingredientes</h3>
-        <div class="ingredient">
-          {% for ingredient in recipe.ingredients %}
+        {% for ingredient in recipe.ingredients %}
+          <div class="ingredient">
             <input type="text" name="ingredients[]" value="{{ingredient}}" id="inputIngredient">
-          {% endfor %}
-        </div>
+          </div>
+        {% endfor %}
       </div>
       <button type="button" id="add-ingredient">Adicionar novo ingrediente</button>
 
-      <div class="field preparation">
+      <div class="field" id="preparation">
         <h3>Modo de preparo</h3>
-        <div class="step">
-          {% for step in recipe.preparation %}
+        {% for step in recipe.preparation %}
+          <div class="steps">
             <input type="text" name="preparation[]" id="inputStep" value="{{step}}">
-          {% endfor %}
-        </div>
-        <button type="button" id="add-step">Adicionar novo passo</button>
+          </div>
+        {% endfor %}
       </div>
+      <button type="button" id="add-step">Adicionar novo passo</button>
 
       <div class="field">
         <h3>Informações adicionais</h3>
