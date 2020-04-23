@@ -1,4 +1,4 @@
-const data = require('../data')
+const data = require('../data.json')
 
 
 exports.index = function (req, res) {
@@ -14,7 +14,11 @@ exports.about = function (req, res) {
 }
 
 exports.recipes = function (req, res) {
-  return res.render("user/recipes")
+
+
+
+
+  return res.render("user/recipes", { recipes: data.recipes })
 }
 
 exports.recipeInfo = function (req, res) {

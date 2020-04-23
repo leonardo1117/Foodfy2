@@ -1,17 +1,3 @@
-const recepies = document.querySelectorAll('.receita')
-
-//mostrando as receitas e os criadores com base nos objetos criados no arquivo data.js
-for (let receita of recepies) {
-  const imgId = receita.getAttribute("id")
-  const recepieName = receita.children[1].innerHTML
-  const recepieBy = receita.children[2].innerHTML
-  receita.addEventListener("click", function () {
-    window.location.href = `/recipeInfo?id=${imgId}`
-
-
-  })
-}
-
 const blocoIngredientes = document.querySelector('.block__ingredients')
 const blocoPreparacao = document.querySelector('.block__preparation')
 const blocoInformacoes = document.querySelector('.block__information')
