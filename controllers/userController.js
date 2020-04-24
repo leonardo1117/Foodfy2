@@ -32,6 +32,11 @@ exports.show = function (req, res) {
   if (!foundRecipe) return res.send("Recipe not found")
 
 
-  return res.render("user/show", { recipe: foundRecipe })
+  const recipe = {
+    ...foundRecipe
+  }
+
+
+  return res.render("user/show", { recipe })
 
 }

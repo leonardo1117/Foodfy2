@@ -18,7 +18,6 @@ routes.get("/admin/recipes/create", adminController.create)
 routes.post("/admin", adminController.post)
 routes.get("/admin/recipes/:id", adminController.show)
 routes.get("/admin/recipes/:id/edit", adminController.edit)
-
 routes.put("/admin/recipes", adminController.put)
 routes.delete("/admin/recipes", adminController.delete)
 
