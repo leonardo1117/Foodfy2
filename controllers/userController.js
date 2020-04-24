@@ -22,17 +22,16 @@ exports.recipes = function (req, res) {
 }
 
 exports.recipeInfo = function (req, res) {
-  const id = req.query.id
+  
+  const {id} = req.params
 
-  const recipe = data.find(function (recipe) {
-    if (recipe.id == id) {
-      return true
-    }
+  const foundRecipe = data.recipes.find(function (recipe){
+    return recipe.id == id
   })
 
-  if (!recipe) {
-    return res.send("Receita não encontrada!")
-  }
+  if (!foundRecipe) return res.send("Recipe not found")
+
 
   return res.render("user/recipeInfo", { recipe })
+
 }

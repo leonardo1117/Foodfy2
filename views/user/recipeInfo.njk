@@ -1,87 +1,69 @@
-<!DOCTYPE html>
-<html>
+{% extends "layoutAdm.njk" %}
 
-  <head>
-    <link rel="stylesheet" href="styles.css">
-    <title>{{recipe.title}}</title>
-  </head>
+{%block content %}
+  <section class="container">
 
-  <body>
-    <header>
-      <a href="/"><img src="./assets/logo.png" alt="Logo da Foodfy"></a>
-      <div class="links">
-        <a href="/about">Sobre</a>
-        <a href="/recipes">Receitas</a>
+    <div class="top__info">
+      <h2>Receita: Receita</h2>
+        <a href="{{recipe.id}}/edit"><button>Editar receita</button>
+      </a>
+      
+    </div>
+
+    <div class="wrapper-recipe">
+      <div class="single__recipe" id="{{recipes.title}}">
+        <img src={{recipe.image_url}} id="recipeImg" alt="Imagem da receita">
+        <h2 class="receita__nome" id="recipeTitle">Receita</h2>
+        <h2 class="receita__por" id="recipeBy">por Leonardo</h2>
+
       </div>
-    </header>
 
-    <section class="container">
-
-      <div class="wrapper-recipe">
-        <div class="single__recipe" id="{{recipes.title}}">
-          <img src={{recipe.image}} id="recipeImg" alt="Imagem da receita">
-          <h2 class="receita__nome" id="recipeTitle">{{recipe.title}}</h2>
-          <h2 class="receita__por" id="recipeBy">por
-            {{recipe.author}}</h2>
-
+      <div class="title__ingredients pack">
+        <div class="titleDisplay">
+          <h2 class="title">Ingredientes</h2>
+          <h2 class="btn ingredients" id="btnIngredients" onclick="showInformation(blocoIngredientes, btnIngredients)">
+            MOSTRAR</h2>
         </div>
 
-        <div class="title__ingredients pack">
-          <div class="titleDisplay">
-            <h2 class="title">Ingredientes</h2>
-            <h2 class="btn ingredients" id="btnIngredients" onclick="showInformation(blocoIngredientes, btnIngredients)">
-              MOSTRAR</h2>
+        <div class="block__ingredients">
+          <ul>
+            {% for ingredient in recipe.ingredients %}
+              <li>{{ingredient}}</li>
+              {%endfor%}
+            </ul>
           </div>
+        </div>
 
-          <div class="block__ingredients">
+        <div class="title__preparation pack">
+          <div class="titleDisplay">
+            <h2 class="title">Modo de preparo</h2>
+            <h2 class="btn preparation" id="btnPreparation" onclick="showInformation(blocoPreparacao, btnPreparation)">
+              MOSTRAR
+            </h2>
+          </div>
+          <div class="block__preparation">
             <ul>
-              {% for recipeIngredients in recipe.ingredients %}
-                <li>{{recipeIngredients}}</li>
+              {% for step in recipe.preparation %}
+                <li>{{step}}</li>
                 {%endfor%}
               </ul>
+
             </div>
           </div>
 
-          <div class="title__preparation pack">
+          <div class="title__information pack">
             <div class="titleDisplay">
-              <h2 class="title">Modo de preparo</h2>
-              <h2 class="btn preparation" id="btnPreparation" onclick="showInformation(blocoPreparacao, btnPreparation)">
+              <h2 class="title">Informações adicionais</h2>
+              <h2 class="btn information" id="btnInformation" onclick="showInformation(blocoInformacoes, btnInformation)">
                 MOSTRAR
               </h2>
             </div>
-            <div class="block__preparation">
-              <ul>
-                {% for recipePreparation in recipe.preparation %}
-                  <li>{{recipePreparation}}</li>
-                  {%endfor%}
-                </ul>
-
-              </div>
-            </div>
-
-            <div class="title__information pack">
-              <div class="titleDisplay">
-                <h2 class="title">Informações adicionais</h2>
-                <h2 class="btn information" id="btnInformation" onclick="showInformation(blocoInformacoes, btnInformation)">
-                  MOSTRAR
-                </h2>
-              </div>
-              <div class="block__information">
-                <p id="infoP">{{recipe.information}}</p>
-              </div>
+            <div class="block__information">
+              <p id="infoP">{{recipe.info}}</p>
             </div>
           </div>
+        </div>
 
-        </section>
+      </section>
 
-        <footer>
-          <div class="footer__text">
-            <p>Todos os direitos reservados, receitas Foodfy.</p>
-          </div>
-        </footer>
-
-        <script src="/scripts.js"></script>
-
-      </body>
-
-    </html>
+    {% endblock %}
