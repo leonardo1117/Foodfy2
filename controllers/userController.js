@@ -21,7 +21,7 @@ exports.recipes = function (req, res) {
   return res.render("user/recipes", { recipes: data.recipes })
 }
 
-exports.recipeInfo = function (req, res) {
+exports.show = function (req, res) {
   
   const {id} = req.params
 
@@ -32,6 +32,6 @@ exports.recipeInfo = function (req, res) {
   if (!foundRecipe) return res.send("Recipe not found")
 
 
-  return res.render("user/recipeInfo", { recipe })
+  return res.render("user/show", { recipe: foundRecipe })
 
 }

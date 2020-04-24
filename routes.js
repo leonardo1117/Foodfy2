@@ -9,10 +9,10 @@ const adminController = require('./controllers/adminControllers')
 routes.get("/", recipesController.index)
 routes.get("/about", recipesController.about)
 routes.get("/recipes", recipesController.recipes)
-routes.get("/recipeInfo/:id", recipesController.recipeInfo)
+routes.get("/recipes/:id", recipesController.show)
 
 
-// //rotas admin
+//rotas admin
 routes.get("/admin/recipes", adminController.index)
 routes.get("/admin/recipes/create", adminController.create)
 routes.post("/admin", adminController.post)
