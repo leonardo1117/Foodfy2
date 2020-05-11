@@ -24,5 +24,6 @@ routes.delete("/admin/recipes", adminController.delete)
 
 routes.get("/admin/chefs", chefController.index)
 routes.get("/admin/chefs/create", chefController.create)
+routes.post("/chefs", chefController.post)
 
 module.exports = routes

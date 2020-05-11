@@ -269,7 +269,6 @@ footer p{
   margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr auto auto;
-  gap: 10px;
 }
 
 .main-title h2{
@@ -288,6 +287,10 @@ footer p{
   cursor: pointer;
 }
 
+#delete-button{
+  margin-right: 10px;
+}
+
 .main-title button{
   padding: 12px 28px;
 }
@@ -299,6 +302,7 @@ footer p{
 
 .field h3{
   font-size: 16px;
+  margin-bottom: 10px;
 }
 
 #add-ingredient,
@@ -312,6 +316,11 @@ footer p{
   outline: none;
 }
 
+#add-ingredient,
+#add-step {
+  margin-top: 15px;
+}
+
 .field input,
 .field textarea{
   width: 100%;
@@ -320,6 +329,7 @@ footer p{
   border-radius: 4px;
   font-size: 16px;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .field textarea{
