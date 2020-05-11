@@ -1,0 +1,24 @@
+{% extends "layoutAdm.njk" %}
+
+{%block content %}
+
+  <form class="container" action="/chefs" method="POST">
+
+    <div class="main-title">
+      <h2>Criando Receita</h2>
+      <button type="submit">Salvar receita</button>
+    </div>
+
+    <div class="field">
+      <h3>Nome</h3>
+      <input type="text" name="name" placeholder="http://">
+    </div>
+
+    <div class="field">
+      <h3>Avatar</h3>
+      <input type="text" name="image" placeholder="http://">
+    </div>
+
+  </form>
+
+{% endblock %}
