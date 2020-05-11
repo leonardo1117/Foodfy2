@@ -17,8 +17,17 @@ module.exports = {
       }
     }
 
-    Chef.create(req.body, function(chef){
+    Chef.create(req.body, function (chef) {
       return res.send('Dado gravado!')
     })
-  }
+  },
+  show(req, res) { },
+  edit(req, res) {
+
+    Chef.find(req.params.id, function (chef) {
+      return res.render('chefs/edit', { chef })
+    })
+  },
+  put(req, res) { },
+  delete(req, res) { },
 }

@@ -1,0 +1,35 @@
+{% extends "layoutAdm.njk" %}
+
+{%block content %}
+  <section class="container">
+
+    <div class="main-title">
+      <h2>Editar Receita</h2>
+
+      <form action="/admin/recipes?_method=DELETE" method="POST" id="delete-button">
+        <button type="submit">Deletar</button>
+        <input type="hidden" name="id" value="{{recipe.id}}">
+      </form>
+
+      <form action="/admin/recipes?_method=PUT" method="POST" id="save-button">
+        <button type="submit">Salvar receita</button>
+        <input type="hidden" name="id" value="{{recipe.id}}">
+
+      </div>
+
+      <div class="field">
+        <h3>Nome</h3>
+        <input type="text" name="name" value="{{chef.name}}">
+      </div>
+
+      <div class="field">
+        <h3>Avatar</h3>
+        <input type="text" name="image"value="{{chef.image}}">
+      </div>
+
+    </div>
+  </form>
+
+</section>
+
+{% endblock %}
