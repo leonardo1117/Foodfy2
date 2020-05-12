@@ -4,17 +4,16 @@
   <section class="container">
 
     <div class="main-title">
-      <h2>Editar Receita</h2>
+      <h2>Editar Chef</h2>
 
-      <form action="/admin/recipes?_method=DELETE" method="POST" id="delete-button">
+      <form action="/admin/chefs?_method=DELETE" method="POST" id="delete-button">
         <button type="submit">Deletar</button>
-        <input type="hidden" name="id" value="{{recipe.id}}">
+        <input type="hidden" name="id" value="{{chef.id}}">
       </form>
 
-      <form action="/admin/recipes?_method=PUT" method="POST" id="save-button">
+      <form action="/admin/chefs?_method=PUT" method="POST" id="save-button">
         <button type="submit">Salvar receita</button>
-        <input type="hidden" name="id" value="{{recipe.id}}">
-
+        <input type="hidden" name="id" value="{{chef.id}}">
       </div>
 
       <div class="field">
