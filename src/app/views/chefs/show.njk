@@ -1,0 +1,24 @@
+{% extends "layoutAdm.njk" %}
+
+{%block content %}
+  <section class="container">
+
+    <div class="top__info">
+      <h2>Chef:
+        {{chef.name}}</h2>
+      <a href="{{chef.id}}/edit">
+        <button>Editar Chef</button>
+      </a>
+
+    </div>
+
+    <div class="chef-wrapper">
+      <img src={{chef.image}} class="chef-image" alt="Imagem do chef">
+      <h2 class="chef-name">{{chef.name}}</h2>
+      <h2 class="chef-recipes">nº de receitas</h2>
+
+    </div>
+
+  </section>
+
+{% endblock %}
