@@ -20,6 +20,7 @@ O projeto ainda está sendo desenvolvido conforme os desafios e novos conhecimen
 - HTML/CSS/JavaScript - Para criação, estilização e manipulação dos conteúdos da aplicação
 - [Nunjucks](https://mozilla.github.io/nunjucks) - Uma linguagem de templates rica e poderosa para JavaScript
 - [NodeJS](https://nodejs.org/en/) - Para desenvolvimento do server side da aplicação
+- [Express](https://expressjs.com/) - Framework web para Node.js
 - [PostgreSQL](https://www.postgresql.org/) - Banco de dados relacional da aplicação
 
 <!-- ## Necessário para utilizar a aplicação
