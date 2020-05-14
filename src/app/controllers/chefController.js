@@ -3,7 +3,12 @@ const data = require('../../../data.json')
 
 module.exports = {
   index(req, res) {
-    return res.render('chefs/index')
+
+    Chef.find(function (chefs) {
+      console.log(chefs)
+      return res.render('chefs/index', { chefs })
+    })
+
   },
   create(req, res) {
     return res.render('chefs/create')
@@ -24,7 +29,7 @@ module.exports = {
   },
   show(req, res) {
 
-    Chef.find(req.params.id, function (chef) {
+    Chef.findOne(req.params.id, function (chef) {
       if (!chef) res.send('Chef not found')
 
       return res.render('chefs/show', { chef, recipes: data.recipes })

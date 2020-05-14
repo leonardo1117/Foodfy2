@@ -307,7 +307,8 @@ footer p{
 
 #add-ingredient,
 #add-step,
-.recipe-info button{
+.recipe-info button,
+.chefs-info button{
   font-size: 16px;
   color: #6558C3;
   cursor: pointer;
@@ -434,4 +435,11 @@ footer p{
   margin: 50px 0 30px;
 }
 
+
+/* CHEFS INDEX */
+
+.chef-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 

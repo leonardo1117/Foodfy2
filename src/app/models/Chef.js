@@ -24,7 +24,14 @@ module.exports = {
       callback(results.rows[0])
     })
   },
-  find(id, callback){
+  find(callback){
+    db.query(`SELECT chefs.* FROM chefs`, function(err, results){
+      if (err) throw `Database error ${err}`
+
+      callback(results.rows)
+    })
+  },
+  findOne(id, callback){
 
     db.query(`SELECT * FROM chefs WHERE id = $1`, [id], function(err, results){
       if (err) throw `Database error ${err}`
