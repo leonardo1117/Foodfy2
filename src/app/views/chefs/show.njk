@@ -19,6 +19,30 @@
 
     </div>
 
+    <h2 class="recipes-title">Receitas</h2>
+    
+    <div class="recipe-list">
+
+    
+      {% for recipe in recipes %}
+
+        <div class="recipe-box">
+
+          <div class="recipe-img">
+            <img src="{{recipe.image_url}}" alt="Triplo bacon burger">
+          </div>
+          <div class="recipe-info">
+            <h2>Nome da receita</h2>
+            <h2>por Jorge Relato</h2>
+            <a href="/admin/recipes/{{recipe.id}}">
+              <button>Visualizar</button>
+            </a>
+          </div>
+        </div>
+
+      {% endfor %}
+    </div>
+
   </section>
 
 {% endblock %}

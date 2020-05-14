@@ -1,4 +1,5 @@
 const Chef = require('../models/Chef')
+const data = require('../../../data.json')
 
 module.exports = {
   index(req, res) {
@@ -26,7 +27,7 @@ module.exports = {
     Chef.find(req.params.id, function (chef) {
       if (!chef) res.send('Chef not found')
 
-      return res.render('chefs/show', { chef })
+      return res.render('chefs/show', { chef, recipes: data.recipes })
     })
 
   },
