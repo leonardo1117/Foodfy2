@@ -260,7 +260,9 @@ footer p{
 
 /* ADMIN CREATE RECIPE */
 
-.manage-recipes-title h2{
+.manage-recipes-title h2,
+.recipes-title,
+.chefs-title{
   font-size: 24px;
   margin: 50px 0 30px;
 }
@@ -370,14 +372,16 @@ footer p{
 
 .recipe-box {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 1fr;
   margin-bottom: 20px;
   gap:20px
 }
 
 .recipe-img img{
-  width: 100%;
+  width: 172px;
+  height: 80px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .recipe-info h2{
@@ -429,13 +433,6 @@ footer p{
   border-radius: 4px;
   padding: 10px;
 }
-
-.recipes-title,
-.chefs-title {
-  font-size: 24px;
-  margin: 50px 0 30px;
-}
-
 
 /* CHEFS INDEX */
 

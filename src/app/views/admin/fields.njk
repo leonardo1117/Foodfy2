@@ -5,14 +5,21 @@
 
 <div class="field">
   <h3>Imagem da receita</h3>
-  <input type="text" name="image_url" placeholder="http://">
+  <input type="text" name="image" placeholder="http://">
 </div>
 
 <div class="field">
   <h3>Chef</h3>
-  <select name="chef" placeholder="Selecione um chef">
-    <option value=""></option>
+  <select name="chef_id">
+    {% for chef in chefOptions %}
+      <option value="{{chef.id}}">{{chef.name}}</option>
+    {% endfor %}
   </select>
+</div>
+
+<div class="field">
+  <h3>Título da receita</h3>
+  <input type="text" name="title">
 </div>
 
 <div class="field" id="ingredients">
@@ -33,5 +40,5 @@
 
 <div class="field">
   <h3>Informações adicionais</h3>
-  <textarea name="info" rows="10"></textarea>
+  <textarea name="information" rows="10"></textarea>
 </div>

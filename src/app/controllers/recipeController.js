@@ -1,5 +1,6 @@
 const fs = require('fs')
 const data = require('../../../data.json')
+const Recipe = require('../models/Recipe')
 
 
 module.exports = {
@@ -7,35 +8,26 @@ module.exports = {
     return res.render('admin/index', { recipes: data.recipes })
   },
   create(req, res) {
-    return res.render('admin/create')
+
+    Recipe.chefOptions(function (options) {
+      return res.render('admin/create', { chefOptions: options })
+    })
   },
   post(req, res) {
 
-    let id = 1
-    const lastRecipe = data.recipes[data.recipes.length - 1]
+    const keys = Object.keys(req.body)
 
-    if (lastRecipe) {
-      id = lastRecipe.id + 1
+    for (key of keys){
+      if (req.body[key] == ""){
+        return res.send('Por favor preencha todos os campos')
+      }
     }
 
+    Recipe.create(req.body, function(recipe){
 
+      return res.redirect("/admin/recipes")
 
-    data.recipes.push({
-      id,
-      ...req.body,
-      ingredients: req.body.ingredients.filter(function (valor) {
-        return valor != ""
-      }),
-      preparation: req.body.preparation.filter(function (valor) {
-        return valor != ""
-      }),
     })
-
-    fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
-      if (err) return res.send("Write file error")
-    })
-
-    return res.redirect("/admin/recipes")
   },
   show(req, res) {
     const { id } = req.params
