@@ -2,15 +2,24 @@
 
 {% block content %}
 
-  <div class="chef-list">
-    {% for chef in chefs %}
-      <div class="chefs-info">
-        <img src="{{chef.image}}" alt="Foto do chef {{chef.name}}">
-        <h2>{{chef.name}}</h2>
-        <a href="/admin/chefs/{{chef.id}}">
-          <button>Visualizar</button>
-        </a>
-      </div>
-    {% endfor %}
-  </div>
+  <section class="container">
+
+  <h2 class="chefs-title">Gerenciar Chefs</h2>
+
+    <div class="chef-list">
+      {% for chef in chefs %}
+        <div class="chefs-info">
+          <img src="{{chef.image}}" alt="Foto do chef {{chef.name}}">
+          <div class="chefs-text">
+            <h2>{{chef.name}}</h2>
+            <a href="/admin/chefs/{{chef.id}}">
+              <button>Visualizar</button>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </section>
+
 {% endblock content %}

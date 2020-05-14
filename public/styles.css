@@ -430,7 +430,8 @@ footer p{
   padding: 10px;
 }
 
-.recipes-title {
+.recipes-title,
+.chefs-title {
   font-size: 24px;
   margin: 50px 0 30px;
 }
@@ -441,5 +442,33 @@ footer p{
 .chef-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.chefs-info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.chefs-info img {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  align-self: baseline;
+}
+
+.chefs-text {
+  align-self: center;
+}
+
+.chefs-text h2{
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.chefs-text button {
+  font-size: 14px;
 }
 
