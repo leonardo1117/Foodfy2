@@ -15,15 +15,7 @@ module.exports = {
   },
   post(req, res) {
 
-    const keys = Object.keys(req.body)
-
-    for (key of keys){
-      if (req.body[key] == ""){
-        return res.send('Por favor preencha todos os campos')
-      }
-    }
-
-    Recipe.create(req.body, function(recipe){
+    Recipe.create(req.body, function (recipe) {
 
       return res.redirect("/admin/recipes")
 
@@ -50,20 +42,13 @@ module.exports = {
     return res.render('admin/show', { recipe })
   },
   edit(req, res) {
-    const { id } = req.params
 
-    const foundRecipe = data.recipes.find(function (recipe) {
-      return recipe.id == id
+    Recipe.find(req.params.id, function (recipe) {
+      if (!recipe) res.send('Recipe not found')
+
+      return res.render('admin/edit', { recipe })
     })
 
-    if (!foundRecipe) return res.send("Recipe not found!")
-
-    const recipe = {
-      ...foundRecipe,
-      // ingredients: foundRecipe.ingredients.split(","),
-    }
-
-    return res.render('admin/edit', { recipe })
   },
   put(req, res) {
     const { id } = req.body

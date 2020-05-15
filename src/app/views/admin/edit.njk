@@ -14,45 +14,45 @@
       <form action="/admin/recipes?_method=PUT" method="POST" id="save-button">
         <button type="submit">Salvar receita</button>
         <input type="hidden" name="id" value="{{recipe.id}}">
-
       </div>
-
       <div class="field">
         <h3>Imagem da receita</h3>
-        <input type="text" name="image_url" placeholder="http://" value="{{recipe.image_url}}">
+        <input type="text" name="image" placeholder="http://">
       </div>
 
       <div class="field">
         <h3>Chef</h3>
-        <select name="chef" placeholder="Selecione um chef">
-          <option value=""></option>
+        <select name="chef_id">
+          {% for chef in chefOptions %}
+            <option value="{{chef.id}}">{{chef.name}}</option>
+          {% endfor %}
         </select>
+      </div>
+
+      <div class="field">
+        <h3>Título da receita</h3>
+        <input type="text" name="title">
       </div>
 
       <div class="field" id="ingredients">
         <h3>Ingredientes</h3>
-        {% for ingredient in recipe.ingredients %}
-          <div class="ingredient">
-            <input type="text" name="ingredients[]" value="{{ingredient}}" id="inputIngredient">
-          </div>
-        {% endfor %}
+        <div class="ingredient">
+          <input type="text" name="ingredients[]" id="inputIngredient">
+        </div>
       </div>
       <button type="button" id="add-ingredient">Adicionar novo ingrediente</button>
 
       <div class="field" id="preparation">
         <h3>Modo de preparo</h3>
-        {% for step in recipe.preparation %}
-          <div class="steps">
-            <input type="text" name="preparation[]" id="inputStep" value="{{step}}">
-          </div>
-        {% endfor %}
+        <div class="steps">
+          <input type="text" name="preparation[]" id="inputStep">
+        </div>
       </div>
       <button type="button" id="add-step">Adicionar novo passo</button>
 
       <div class="field">
         <h3>Informações adicionais</h3>
-        <textarea name="info" rows="10">{{recipe.info}}</textarea>
-
+        <textarea name="information" rows="10"></textarea>
       </div>
     </form>
 
