@@ -37,38 +37,20 @@ module.exports = {
     Recipe.find(req.params.id, function (recipe) {
       if (!recipe) res.send('Recipe not found')
 
-      return res.render('admin/edit', { recipe })
+
+      Recipe.chefOptions(function (options) {
+        return res.render('admin/edit', { recipe, chefOptions: options })
+      })
+
     })
 
   },
   put(req, res) {
-    const { id } = req.body
-    let index = 0
 
-    const foundRecipe = data.recipes.find(function (recipe, foundIndex) {
-
-      if (id == recipe.id) {
-        index = foundIndex
-        return true
-      }
-
+    Recipe.update(req.body, function () {
+      return res.redirect(`/admin/recipes/${req.body.id}`)
     })
 
-    if (!foundRecipe) return res.send('Recipe not found!')
-
-    const recipe = {
-      ...foundRecipe,
-      ...req.body,
-      id: Number(req.body.id)
-    }
-
-    data.recipes[index] = recipe
-
-    fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
-      if (err) return res.send('Write error')
-    })
-
-    return res.redirect(`/admin/recipes/${id}`)
 
   },
   delete(req, res) {

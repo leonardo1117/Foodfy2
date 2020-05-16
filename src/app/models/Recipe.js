@@ -56,7 +56,7 @@ module.exports = {
     title=($3),
     ingredients=($4),
     preparation=($5),
-    information=($6),
+    information=($6)
     WHERE id = $7`
 
 
