@@ -47,9 +47,9 @@
       <div class="field" id="preparation">
         <h3>Modo de preparo</h3>
         <div class="steps">
-        {% for step in recipe.preparation %}
-          <input type="text" name="preparation[]" id="inputStep" value="{{step}}">
-        {% endfor %}
+          {% for step in recipe.preparation %}
+            <input type="text" name="preparation[]" id="inputStep" value="{{step}}">
+          {% endfor %}
         </div>
       </div>
       <button type="button" id="add-step">Adicionar novo passo</button>
