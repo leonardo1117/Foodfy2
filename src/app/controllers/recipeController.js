@@ -22,24 +22,15 @@ module.exports = {
     })
   },
   show(req, res) {
-    const { id } = req.params
 
-    const foundRecipe = data.recipes.find(function (recipe) {
-      return recipe.id == id
+    Recipe.find(req.params.id, function (recipe) {
+      if (!recipe) res.send('Recipe not found')
+
+
+      return res.render('admin/show', { recipe })
     })
 
-    if (!foundRecipe) return res.send("Recipe not found!")
 
-    foundRecipe.ingredients = foundRecipe.ingredients.filter(function (valor) {
-      return valor !== " "
-    })
-
-    const recipe = {
-      ...foundRecipe,
-    }
-
-
-    return res.render('admin/show', { recipe })
   },
   edit(req, res) {
 
