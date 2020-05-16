@@ -13,11 +13,11 @@
         <div class="recipe-box">
 
           <div class="recipe-img">
-            <img src="{{recipe.image_url}}" alt="Triplo bacon burger">
+            <img src="{{recipe.image}}" alt="Triplo bacon burger">
           </div>
           <div class="recipe-info">
-            <h2>Nome da receita</h2>
-            <h2>por Jorge Relato</h2>
+            <h2>{{recipe.title}}</h2>
+            <h2>{{recipe.chef_id}}</h2>
             <a href="/admin/recipes/{{recipe.id}}">
               <button>Visualizar</button>
             </a>

@@ -5,7 +5,11 @@ const Recipe = require('../models/Recipe')
 
 module.exports = {
   index(req, res) {
-    return res.render('admin/index', { recipes: data.recipes })
+
+    Recipe.all(function (recipes) {
+
+      return res.render('admin/index', { recipes })
+    })
   },
   create(req, res) {
 
