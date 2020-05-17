@@ -16,7 +16,7 @@ module.exports = {
 
       Recipe.chefOptions(function (options) {
 
-        return res.render('admin/index', { recipes, chefOptions: options })
+        return res.render('recipes/index', { recipes, chefOptions: options })
       })
 
     })
@@ -24,7 +24,7 @@ module.exports = {
   create(req, res) {
 
     Recipe.chefOptions(function (options) {
-      return res.render('admin/create', { chefOptions: options })
+      return res.render('recipes/create', { chefOptions: options })
     })
   },
   post(req, res) {
@@ -41,7 +41,7 @@ module.exports = {
       if (!recipe) res.send('Recipe not found')
 
 
-      return res.render('admin/show', { recipe })
+      return res.render('recipes/show', { recipe })
     })
 
 
@@ -53,7 +53,7 @@ module.exports = {
 
 
       Recipe.chefOptions(function (options) {
-        return res.render('admin/edit', { recipe, chefOptions: options })
+        return res.render('recipes/edit', { recipe, chefOptions: options })
       })
 
     })
