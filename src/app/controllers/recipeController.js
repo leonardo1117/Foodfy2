@@ -2,13 +2,23 @@ const fs = require('fs')
 const data = require('../../../data.json')
 const Recipe = require('../models/Recipe')
 
+// SELECT chefs.*, count(recipes) as total_recipes
+//     FROM chefs
+//     LEFT JOIN recipes ON (recipes.chef_id = chefs.id)
+//     GROUP BY chefs.id
+    
+
 
 module.exports = {
   index(req, res) {
 
     Recipe.all(function (recipes) {
 
-      return res.render('admin/index', { recipes })
+      Recipe.chefOptions(function (options) {
+
+        return res.render('admin/index', { recipes, chefOptions: options })
+      })
+
     })
   },
   create(req, res) {

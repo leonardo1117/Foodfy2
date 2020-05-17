@@ -47,6 +47,13 @@ module.exports = {
       callback(results.rows[0])
     })
   },
+  findChef(id, callback){
+    db.query(`SELECT * from chefs WHERE id = $1`, [id], function(err, results){
+      if (err) throw `Database error ${err}`
+
+      callback(results.rows)
+    })
+  },
   update(data, callback){
 
     const query = `
