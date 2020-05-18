@@ -46,6 +46,10 @@ header img{
   font-weight: bold;
 }
 
+.active {
+  font-weight: bold;
+}
+
 
 /* === CONTAINER COM AS MELHORES RECEITAS === */
 

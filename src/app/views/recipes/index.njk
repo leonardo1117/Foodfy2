@@ -11,13 +11,14 @@
       {% for recipe in recipes %}
 
         <div class="recipe-box">
+          <input type="hidden" name="id" value="{{recipe.id}}">
 
           <div class="recipe-img">
             <img src="{{recipe.image}}" alt="Triplo bacon burger">
           </div>
           <div class="recipe-info">
             <h2>{{recipe.title}}</h2>
-            <h2>{{recipe.chef_id}}</h2>
+            <h2>{{recipe.chef_name}}</h2>
             <a href="/admin/recipes/{{recipe.id}}">
               <button>Visualizar</button>
             </a>
