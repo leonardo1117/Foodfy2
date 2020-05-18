@@ -24,22 +24,37 @@ module.exports = {
       callback(results.rows[0])
     })
   },
-  all(callback){
-    db.query(`SELECT chefs.* FROM chefs`, function(err, results){
+  all(callback) {
+    db.query(`SELECT chefs.* FROM chefs`, function (err, results) {
       if (err) throw `Database error ${err}`
 
       callback(results.rows)
     })
   },
-  find(id, callback){
+  find(id, callback) {
 
-    db.query(`SELECT * FROM chefs WHERE id = $1`, [id], function(err, results){
+
+    db.query(`SELECT chefs.*, count(recipes.chef_id) AS total_recipes,
+    recipes.title AS recipe_title,
+    recipes.image AS recipe_image,
+    recipes.id AS recipe_id
+    FROM chefs
+    LEFT JOIN recipes ON (recipes.chef_id = chefs.id)
+    WHERE chefs.id = $1
+    GROUP BY chefs.id, recipes.title, recipes.image, recipe_id`, [id], function (err, results) {
       if (err) throw `Database error ${err}`
 
       callback(results.rows[0])
     })
   },
-  update(data, callback){
+  chefInfo(callback) {
+    db.query(`SELECT chefs.*, count(recipes.chef_id) AS total_recipes
+    FROM chefs
+    LEFT JOIN recipes ON (recipes.chef_id = chefs.id)
+    WHERE chefs.id = 1
+    GROUP BY chefs.id`)
+  },
+  update(data, callback) {
 
     const query = `
     UPDATE chefs SET
@@ -54,15 +69,15 @@ module.exports = {
       data.id
     ]
 
-    db.query(query, values, function(err, results){
+    db.query(query, values, function (err, results) {
       if (err) throw `Database error ${err}`
 
       callback()
     })
 
   },
-  delete(id, callback){
-    db.query(`DELETE FROM chefs where id = $1`, [id], function(err, results){
+  delete(id, callback) {
+    db.query(`DELETE FROM chefs where id = $1`, [id], function (err, results) {
       if (err) throw `Database error ${err}`
 
       return callback()

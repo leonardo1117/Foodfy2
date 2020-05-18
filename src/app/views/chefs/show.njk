@@ -15,7 +15,7 @@
     <div class="chef-wrapper">
       <img src={{chef.image}} class="chef-image" alt="Imagem do chef">
       <h2 class="chef-name">{{chef.name}}</h2>
-      <h2 class="chef-recipes">nº de receitas</h2>
+      <h2 class="chef-recipes">{{chef.total_recipes}} receitas</h2>
 
     </div>
 
@@ -29,12 +29,12 @@
         <div class="recipe-box">
 
           <div class="recipe-img">
-            <img src="{{recipe.image_url}}" alt="Triplo bacon burger">
+            <img src="{{chef.recipe_image}}" alt="Triplo bacon burger">
           </div>
           <div class="recipe-info">
-            <h2>Nome da receita</h2>
-            <h2>por Jorge Relato</h2>
-            <a href="/admin/recipes/{{recipe.id}}">
+            <h2>{{chef.recipe_title}}</h2>
+            <h2>{{chef.name}}</h2>
+            <a href="/admin/recipes/{{chef.recipe_id}}">
               <button>Visualizar</button>
             </a>
           </div>
