@@ -6,7 +6,7 @@ module.exports = {
   index(req, res) {
 
 
-    Recipe.findChef(function (recipes) {
+    Recipe.all(function (recipes) {
 
       return res.render('recipes/index', { recipes })
 
@@ -34,7 +34,6 @@ module.exports = {
 
       return res.render('recipes/show', { recipe })
     })
-
 
   },
   edit(req, res) {
