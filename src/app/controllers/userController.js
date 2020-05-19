@@ -21,19 +21,13 @@ module.exports = {
   show(req, res) {
     const { id } = req.params
 
-    const foundRecipe = data.recipes.find(function (recipe) {
-      return recipe.id == id
+    Recipe.find(id, function (recipe) {
+      if (!recipe) res.send('Recipe not found')
+
+      return res.render("user/show", { recipe })
+
     })
 
-    if (!foundRecipe) return res.send("Recipe not found")
-
-
-    const recipe = {
-      ...foundRecipe
-    }
-
-
-    return res.render("user/show", { recipe })
 
   },
   chefs(req, res) {
