@@ -28,10 +28,16 @@ module.exports = {
   },
   show(req, res) {
 
-    Chef.find(req.params.id, function (chef) {
+    const { id } = req.params
+
+    Chef.find(id, function (chef) {
       if (!chef) res.send('Chef not found')
 
-      return res.render('chefs/show', { chef, recipes: chef.total_recipes })
+      Chef.chefRecipes(id, function (recipes) {
+
+        return res.render('chefs/show', { chef, recipes })
+      })
+
     })
 
   },
