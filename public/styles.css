@@ -420,6 +420,7 @@ footer p{
   border-radius: 50%;
   justify-self: center;
   margin-bottom: 30px;
+  object-fit: cover;
 }
 
 .chef-name {
@@ -457,6 +458,7 @@ footer p{
   width: 64px;
   border-radius: 50%;
   align-self: baseline;
+  object-fit: cover;
 }
 
 .chefs-text {
