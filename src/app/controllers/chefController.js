@@ -1,5 +1,4 @@
 const Chef = require('../models/Chef')
-const data = require('../../../data.json')
 
 module.exports = {
   index(req, res) {

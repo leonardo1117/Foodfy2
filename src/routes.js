@@ -9,6 +9,7 @@ routes.get("/", userController.index)
 routes.get("/about", userController.about)
 routes.get("/recipes", userController.recipes)
 routes.get("/recipes/:id", userController.show)
+routes.get("/chefs", userController.chefs)
 
 
 routes.get("/admin/recipes", recipeController.index)

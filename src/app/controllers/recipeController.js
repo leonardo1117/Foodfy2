@@ -1,4 +1,3 @@
-const data = require('../../../data.json')
 const Recipe = require('../models/Recipe')
 
 

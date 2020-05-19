@@ -2,6 +2,13 @@ const db = require('../../config/db')
 const { date } = require('../../lib/utils')
 
 module.exports = {
+  all(callback) {
+    db.query(`SELECT chefs.* FROM chefs`, function (err, results) {
+      if (err) throw `Database error ${err}`
+
+      callback(results.rows)
+    })
+  },
   create(data, callback) {
 
 
@@ -22,13 +29,6 @@ module.exports = {
       if (err) throw `Database error ${err}`
 
       callback(results.rows[0])
-    })
-  },
-  all(callback) {
-    db.query(`SELECT chefs.* FROM chefs`, function (err, results) {
-      if (err) throw `Database error ${err}`
-
-      callback(results.rows)
     })
   },
   find(id, callback) {

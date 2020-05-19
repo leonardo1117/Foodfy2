@@ -475,3 +475,11 @@ footer p{
   font-size: 14px;
 }
 
+.chefs-text #chef-name {
+  margin-bottom: 5px;
+}
+
+.chefs-text .chef-recipes {
+  font-size: 14px;
+  color: #666666;
+}
