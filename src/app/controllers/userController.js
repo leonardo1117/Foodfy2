@@ -12,7 +12,10 @@ module.exports = {
 
   },
   recipes(req, res) {
-    return res.render("user/recipes", { recipes: data.recipes })
+
+    Recipe.all(function (recipes) {
+      return res.render("user/recipes", { recipes })
+    })
 
   },
   show(req, res) {

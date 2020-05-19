@@ -31,15 +31,14 @@ header img{
 
 .links{
     margin-left: 120px;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 30px
+    display: flex;
 }
 
 .links a{
   text-decoration: none;
   font-size: 16px;
   color: #111111;
+  margin-right: 30px;
 }
 
 .links :hover{
