@@ -26,12 +26,15 @@ function headerHighlight() {
 }
 headerHighlight()
 
+function showFilterDisplay() {
+  const filterLayout = document.querySelector('.filter')
 
-const filterLayout = document.querySelector('.filter')
-
-if (currentPage != "/") {
-  filterLayout.style.display = 'none'
+  if (currentPage == "/") {
+    filterLayout.style.display = 'inline'
+  }
 }
+showFilterDisplay()
+
 
 
 
