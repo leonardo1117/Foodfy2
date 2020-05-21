@@ -2,11 +2,11 @@ const blocoIngredientes = document.querySelector('.block__ingredients')
 const blocoPreparacao = document.querySelector('.block__preparation')
 const blocoInformacoes = document.querySelector('.block__information')
 const titleInformacoes = document.querySelector('.title__information')
+const currentPage = location.pathname
 
 
 function headerHighlight() {
 
-  const currentPage = location.pathname
   const menuItems = document.querySelectorAll("header .links a")
   const adminHeader = document.querySelectorAll("header .header-links a")
 
@@ -24,8 +24,15 @@ function headerHighlight() {
   }
 
 }
-
 headerHighlight()
+
+
+const filterLayout = document.querySelector('.filter')
+
+if (currentPage != "/") {
+  filterLayout.style.display = 'none'
+}
+
 
 
 
@@ -33,9 +40,10 @@ function showInformation(informationToShow, buttonClicked) {
   informationToShow.style.display != "flex" ? (informationToShow.style.display = "flex", buttonClicked.innerHTML = "ESCONDER") : (informationToShow.style.display = "none", buttonClicked.innerHTML = "MOSTRAR")
 }
 
-const paragrafoInformacao = document.getElementById('infoP')
 
 window.onload = function verifyInfo() {
+
+  const paragrafoInformacao = document.getElementById('infoP')
 
   if (paragrafoInformacao.innerHTML == "") {
     titleInformacoes.style.display = 'none';
@@ -73,10 +81,4 @@ document
     addInput(steps, preparation)
   })
 
-///////////////////// 
 
-const filterLayout = document.querySelector('.filter button')
-
-filterLayout.addEventListener("click", function () {
-  alert("cliekd")
-})
