@@ -3,6 +3,32 @@ const blocoPreparacao = document.querySelector('.block__preparation')
 const blocoInformacoes = document.querySelector('.block__information')
 const titleInformacoes = document.querySelector('.title__information')
 
+
+function headerHighlight() {
+
+  const currentPage = location.pathname
+  const menuItems = document.querySelectorAll("header .links a")
+  const adminHeader = document.querySelectorAll("header .header-links a")
+
+  for (item of menuItems) {
+    if (currentPage.includes(item.getAttribute("href"))) {
+      item.classList.add("active")
+    }
+  }
+
+  for (item of adminHeader) {
+    if (currentPage.includes(item.getAttribute("href"))) {
+      item.classList.add("active")
+      item.style.color = 'white'
+    }
+  }
+
+}
+
+headerHighlight()
+
+
+
 function showInformation(informationToShow, buttonClicked) {
   informationToShow.style.display != "flex" ? (informationToShow.style.display = "flex", buttonClicked.innerHTML = "ESCONDER") : (informationToShow.style.display = "none", buttonClicked.innerHTML = "MOSTRAR")
 }
@@ -28,8 +54,8 @@ function addInput(mainDiv, inputDiv) {
   inputDiv.appendChild(newField);
 }
 
-const ingredients = document.querySelector("#ingredients");
-const fieldContainer = document.querySelectorAll(".ingredient");
+const ingredients = document.querySelector("#ingredients")
+const fieldContainer = document.querySelectorAll(".ingredient")
 
 document
   .querySelector("#add-ingredient")
@@ -47,11 +73,10 @@ document
     addInput(steps, preparation)
   })
 
-const currentPage = location.pathname
-const menuItems = document.querySelectorAll("header .links a")
+///////////////////// 
 
-for (item of menuItems) {
-  if (currentPage.includes(item.getAttribute("href"))){
-    item.classList.add("active")
-  }
-}
+const filterLayout = document.querySelector('.filter button')
+
+filterLayout.addEventListener("click", function () {
+  alert("cliekd")
+})
