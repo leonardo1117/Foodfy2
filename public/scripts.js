@@ -36,13 +36,9 @@ function showFilterDisplay() {
 showFilterDisplay()
 
 
-
-
-
 function showInformation(informationToShow, buttonClicked) {
   informationToShow.style.display != "flex" ? (informationToShow.style.display = "flex", buttonClicked.innerHTML = "ESCONDER") : (informationToShow.style.display = "none", buttonClicked.innerHTML = "MOSTRAR")
 }
-
 
 window.onload = function verifyInfo() {
 
@@ -77,11 +73,9 @@ document
 const preparation = document.querySelector('#preparation')
 const steps = document.querySelectorAll('.steps')
 
-
 document
   .querySelector("#add-step")
   .addEventListener("click", () => {
     addInput(steps, preparation)
   })
-
 

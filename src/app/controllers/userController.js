@@ -5,7 +5,9 @@ const User = require("../models//User")
 
 module.exports = {
   index(req, res) {
-    return res.render("user/index")
+    Recipe.all(function (recipes) {
+      return res.render("user/index", { recipes })
+    })
   },
   about(req, res) {
     return res.render("user/about")
