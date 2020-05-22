@@ -1,6 +1,7 @@
 {% extends "layout.njk" %}
 
 {%block content %}
+
   <section class="container">
 
     <div class="principal">
@@ -21,11 +22,12 @@
           <div class="receita">
             <img src="{{recipe.image}}" alt="Triplo bacon burger">
             <h2 class="receita__nome">{{recipe.title}}</h2>
-            <h2 class="receita__por">{{recipe.chef_name}}</h2>
+            <h2 class="receita__por">por {{recipe.chef_name}}</h2>
           </div>
         {% endfor %}
       </div>
     </div>
 
   </section>
+
 {% endblock %}

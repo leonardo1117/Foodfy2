@@ -134,19 +134,25 @@ header .filter {
 }
 
 .receita img{
-  border-radius: 15px;
+  border-radius: 16px;
   width: 100%;
+  height: 140px;
+  object-fit: cover;
+  margin-bottom: 20px;
 }
 
 .receita__nome{
-  margin-top: 20px;
-  color:#111111
+  color:#111111;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .receita__por{
-  font-size: 16px;
+  font-size: 14px;
   color: #777777;
-  margin-top: 5px;
+  font-weight: normal;
 }
 
 /* === FOOTER === */
