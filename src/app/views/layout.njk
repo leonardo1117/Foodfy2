@@ -19,12 +19,12 @@
       <a href="/chefs">Chefs</a>
 
     </div>
-
-    <div class="filter">
-      <input type="text" name="filter" placeholder="Buscar uma receita">
-      <button type="submit">Buscar</button>
-    </div>
-
+    <form action="/recipes" method="get">
+      <div class="filter">
+        <input type="text" name="filter" placeholder="Buscar uma receita" value={{filter}}>
+        <button type="submit">Buscar</button>
+      </div>
+    </form>
   </header>
 
   {% block content %}{% endblock %}

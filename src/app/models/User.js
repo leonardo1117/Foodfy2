@@ -33,20 +33,19 @@ module.exports = {
         ${filterQuery}
         LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
       `
+    }
 
-      query = `
-        SELECT recipes.*, ${totalQuery}
-        FROM recipes
+    query = `
+        ${totalQuery}
         ${filterQuery}
         LIMIT $1 OFFSET $2
       `
 
-      db.query(query, [limit, offset], function (err, results) {
-        if (err) throw `Database error ${err}`
+    db.query(query, [limit, offset], function (err, results) {
+      if (err) throw `Database error ${err}`
 
-        callback(results.rows)
-      })
-    }
+      callback(results.rows)
+    })
   }
 }
 
