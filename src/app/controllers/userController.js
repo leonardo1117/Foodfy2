@@ -5,6 +5,20 @@ const User = require("../models//User")
 
 module.exports = {
   index(req, res) {
+
+      Recipe.all(function (recipes) {
+      return res.render("user/index", { recipes })
+    })
+    
+  },
+  about(req, res) {
+    return res.render("user/about")
+
+  },
+  recipes(req, res) {
+
+  
+
     let { filter, page, limit } = req.query
 
     page = page || 1
@@ -22,21 +36,13 @@ module.exports = {
           page
         }
 
-        return res.render("user/index", { filter, recipes, pagination })
+        return res.render("user/recipes", { filter, recipes, pagination })
       }
     }
 
     User.pagination(params)
-  },
-  about(req, res) {
-    return res.render("user/about")
 
-  },
-  recipes(req, res) {
 
-    Recipe.all(function (recipes) {
-      return res.render("user/recipes", { recipes })
-    })
 
   },
   show(req, res) {
