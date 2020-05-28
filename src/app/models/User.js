@@ -11,8 +11,8 @@ module.exports = {
       callback(results.rows)
     })
   },
-  pagination(params) {
-    const { filter, limit, offset, callback } = params
+  filterRecipe(params) {
+    const { filter, callback } = params
 
     let query = "",
       filterQuery = "",
@@ -37,10 +37,9 @@ module.exports = {
 
     query = `
         ${totalQuery}
-        LIMIT $1 OFFSET $2
       `
 
-    db.query(query, [limit, offset], function (err, results) {
+    db.query(query, function (err, results) {
       if (err) throw `Database error ${err}`
 
       callback(results.rows)
