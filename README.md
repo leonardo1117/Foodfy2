@@ -6,7 +6,7 @@ Página fictícia de receitas proposta pelo Bootcamp LaunchBase da plataforma Ro
 
 ## Informações
 
-O projeto ainda está em desenvolvimento, as novas funcionalidades são implementadas de acordo com os desafios e novos conhecimentos são passados ao decorrer do curso. 
+O projeto ainda está em desenvolvimento, as novas funcionalidades são implementadas de acordo com os novos desafios e conhecimentos passados ao decorrer do curso. 
 
 <!-- ## Iniciando o projeto
 
