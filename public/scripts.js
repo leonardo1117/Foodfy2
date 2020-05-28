@@ -61,13 +61,14 @@ function addInput(mainDiv, inputDiv) {
   inputDiv.appendChild(newField);
 }
 
+
 const ingredients = document.querySelector("#ingredients")
-const fieldContainer = document.querySelectorAll(".ingredient")
+const totalIngredients = document.querySelectorAll(".ingredient")
 
 document
   .querySelector("#add-ingredient")
   .addEventListener("click", () => {
-    addInput(fieldContainer, ingredients)
+    addInput(totalIngredients, ingredients)
   })
 
 const preparation = document.querySelector('#preparation')
