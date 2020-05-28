@@ -83,7 +83,7 @@ header .filter {
 
 .principal{
     background: #FBDFDB;
-    height: 366px;
+    height: 50vh;
     border-radius: 30px;
     margin: 0 auto;
     display: grid;
@@ -110,8 +110,8 @@ header .filter {
 }
 
 .principal img{
-  padding: 66px 100px 0 248px;
-  position: relative;
+  align-self: flex-end;
+  margin-right: 100px;
 }
 
 /* === HOME PAGE RECEITAS MAIS ACESSADAS === */

@@ -20,7 +20,7 @@
         {% for recipe in recipes %}
 
           <div class="receita">
-            <img src="{{recipe.image}}" alt="Triplo bacon burger">
+            <img src="{{recipe.image}}" alt="imagem de {{recipe.title}}">
             <h2 class="receita__nome">{{recipe.title}}</h2>
             <h2 class="receita__por">por {{recipe.chef_name}}</h2>
           </div>
