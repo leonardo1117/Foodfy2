@@ -30,17 +30,14 @@ module.exports = {
     Recipe.find(req.params.id, function (recipe) {
       if (!recipe) res.send('Recipe not found')
 
-
       return res.render('recipes/show', { recipe })
     })
-
 
   },
   edit(req, res) {
 
     Recipe.find(req.params.id, function (recipe) {
       if (!recipe) res.send('Recipe not found')
-
 
       Recipe.chefOptions(function (options) {
         return res.render('recipes/edit', { recipe, chefOptions: options })

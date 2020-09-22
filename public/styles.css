@@ -363,7 +363,8 @@ footer p{
 }
 
 .field input,
-.field textarea{
+.field textarea,
+.field .image-upload i{
   width: 100%;
   outline: none;
   border: 1px solid rgba(0,0,0,0.2);
@@ -375,6 +376,42 @@ footer p{
 
 .field textarea{
   resize: none;
+}
+
+.field .image-upload {
+  display: block;
+  max-width: 150px;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.field .image-upload #image-input {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  opacity: 0;
+  align-items: center;
+}
+.field .image-upload #image-input button {
+  cursor: pointer;
+}
+
+.field .image-upload i {
+  display: flex;
+  color: #777;
+  padding: 60px;
+  font-size: 28px;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-weight: bold;
+
+  cursor: pointer;
 }
 
 /* ADMIN SHOW RECIPE */
