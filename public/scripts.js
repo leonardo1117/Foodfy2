@@ -40,14 +40,18 @@ function showInformation(informationToShow, buttonClicked) {
   informationToShow.style.display != "flex" ? (informationToShow.style.display = "flex", buttonClicked.innerHTML = "ESCONDER") : (informationToShow.style.display = "none", buttonClicked.innerHTML = "MOSTRAR")
 }
 
-window.onload = function verifyInfo() {
 
-  const paragrafoInformacao = document.getElementById('infoP')
+if (currentPage == "/recipes/") {
+  window.onload = function verifyInfo() {
 
-  if (paragrafoInformacao.innerHTML == "") {
-    titleInformacoes.style.display = 'none';
+    const paragrafoInformacao = document.getElementById('infoP')
+
+    if (paragrafoInformacao.innerHTML == "") {
+      titleInformacoes.style.display = 'none';
+    }
   }
 }
+
 
 /////////////////////////////
 
@@ -60,7 +64,6 @@ function addInput(mainDiv, inputDiv) {
   newField.children[0].value = "";
   inputDiv.appendChild(newField);
 }
-
 
 const ingredients = document.querySelector("#ingredients")
 const totalIngredients = document.querySelectorAll(".ingredient")
@@ -136,3 +139,22 @@ document
 // if (pagination) {
 //   createPagination(pagination)
 // }
+
+
+
+
+// PHOTOS UPLOAD
+
+const PhotosUpload = {
+  uploadLimit: 5,
+  handleFileInput(event) {
+    const { files: fileList } = event.target
+    const { uploadLimit } = PhotosUpload
+
+    if(fileList.length > uploadLimit) {
+      alert(`Por favor, envie no máximo ${uploadLimit} fotos da receita!`)
+      event.preventDefault()
+      return
+    }
+  }
+}

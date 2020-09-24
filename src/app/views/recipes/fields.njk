@@ -5,17 +5,23 @@
 
 <div class="field">
   <h3>Imagem da receita</h3>
-  <div class="image-upload">
-    <input 
-      type="file"
-      name="image"
-      multiple
-      accept="image/*"
-      id="image-input"
+  <div>
+    <div class="image-upload">
+      <input 
+        type="file"
+        name="image"
+        multiple
+        accept="image/*"
+        id="image-input"
+        onchange="PhotosUpload.handleFileInput(event)"
       >
-      <i class="material-icons">add</i>
+        <i class="material-icons">add</i>
+    </div>
+
+    <div class="photos-preview"></div>
   </div>
 </div>
+
 
 <div class="field">
   <h3>Chef</h3>
