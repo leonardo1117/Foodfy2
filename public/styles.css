@@ -376,10 +376,14 @@ footer p{
 
 .field textarea{
   resize: none;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.field .photos-upload {
+  display: flex;
 }
 
 .field .image-upload {
-  display: block;
   width: 150px;
   position: relative;
   overflow: hidden;
@@ -391,7 +395,6 @@ footer p{
   top: 0;
   left: 0;
 
-  display: block;
   width: 100%;
   overflow: hidden;
   height: 100%;
@@ -402,7 +405,6 @@ footer p{
 }
 
 .field .image-upload i {
-  display: flex;
   color: #777;
   padding: 60px;
   font-size: 28px;
@@ -414,6 +416,21 @@ footer p{
 
   cursor: pointer;
 }
+
+.field #photos-preview {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 8px;
+  margin-left: 12px;
+}
+
+.field #photos-preview img {
+  height: 150px;
+  max-width: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
 
 /* ADMIN SHOW RECIPE */
 
