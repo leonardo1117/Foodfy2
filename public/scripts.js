@@ -170,10 +170,11 @@ const PhotosUpload = {
         const div = PhotosUpload.getContainer(image)
 
         PhotosUpload.preview.appendChild(div)
-
       }
       reader.readAsDataURL(file)
     })
+
+    PhotosUpload.input.files = PhotosUpload.getAllFiles()
 
   },
   getContainer(image) {
