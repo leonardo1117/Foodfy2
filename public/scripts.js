@@ -214,6 +214,12 @@ const PhotosUpload = {
       return true
     }
 
+    if(totalPhotos == 0){
+      alert(`Por favor, envie ao menos uma imagemd da receita!`)
+      event.preventDefault()
+      return true
+    }
+
     return false
   },
   getAllFiles() {

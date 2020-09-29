@@ -3,6 +3,7 @@ const routes = express.Router()
 const userController = require('./app/controllers/userController')
 const recipeController = require('./app/controllers/recipeController')
 const chefController = require('./app/controllers/chefController')
+const multer = require('./app/middlewares/multer')
 
 
 routes.get("/", userController.index)
@@ -14,10 +15,10 @@ routes.get("/chefs", userController.chefs)
 
 routes.get("/admin/recipes", recipeController.index)
 routes.get("/admin/recipes/create", recipeController.create)
-routes.post("/admin", recipeController.post)
+routes.post("/admin", multer.array("photos", 5), recipeController.post)
 routes.get("/admin/recipes/:id", recipeController.show)
 routes.get("/admin/recipes/:id/edit", recipeController.edit)
-routes.put("/admin/recipes", recipeController.put)
+routes.put("/admin/recipes", multer.array("photos", 5), recipeController.put)
 routes.delete("/admin/recipes", recipeController.delete)
 
 routes.get("/admin/chefs", chefController.index)

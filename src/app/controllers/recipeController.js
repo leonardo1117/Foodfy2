@@ -1,4 +1,5 @@
 const Recipe = require('../models/Recipe')
+const File = require('../models/File')
 
 
 module.exports = {
@@ -17,13 +18,24 @@ module.exports = {
       return res.render('recipes/create', { chefOptions: options })
     })
   },
-  post(req, res) {
+  async post(req, res) {
 
-    Recipe.create(req.body, function (recipe) {
+    if(req.files.length == 0){
+      return res.send('Por favor, selecione ao menos uma imagem da receita!')
+    }
+
+    let results = await Recipe.create(req.body, () =>{
+      return res.redirect("/admin/recipes")
+    })
+
+    const filesPromise = req.files.map(file => File.create({
+      ...file,
+    }))
+
+    await Promise.all(filesPromise)
 
       return res.redirect("/admin/recipes")
 
-    })
   },
   show(req, res) {
 

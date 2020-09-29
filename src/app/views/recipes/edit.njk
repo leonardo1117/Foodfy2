@@ -11,7 +11,7 @@
         <input type="hidden" name="id" value="{{recipe.id}}">
       </form>
 
-      <form action="/admin/recipes?_method=PUT" method="POST" id="save-button">
+      <form action="/admin/recipes?_method=PUT" method="POST" id="save-button" enctype="multipart/form-data">
         <button type="submit">Salvar receita</button>
         <input type="hidden" name="id" value="{{recipe.id}}">
       </div>
