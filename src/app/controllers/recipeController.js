@@ -20,21 +20,19 @@ module.exports = {
   },
   async post(req, res) {
 
-    if(req.files.length == 0){
+    if (req.files.length == 0) {
       return res.send('Por favor, selecione ao menos uma imagem da receita!')
     }
 
-    let results = await Recipe.create(req.body, () =>{
-      return res.redirect("/admin/recipes")
-    })
-
     const filesPromise = req.files.map(file => File.create({
-      ...file,
+      ...file
     }))
 
     await Promise.all(filesPromise)
 
-      return res.redirect("/admin/recipes")
+    Recipe.create(req.body, (recipe) => {
+      return res.send("recipe created")
+    })
 
   },
   show(req, res) {
