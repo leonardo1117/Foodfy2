@@ -1,5 +1,6 @@
 const Recipe = require('../models/Recipe')
 const File = require('../models/File')
+const RecipeFile = require('../models/RecipeFile')
 
 
 module.exports = {
@@ -26,14 +27,30 @@ module.exports = {
 
     const filesPromise = req.files.map(file => File.create({
       ...file
+    }, (fileId) => {
+      console.log(fileId)
+      return fileId[0]
     }))
 
     await Promise.all(filesPromise)
 
-    Recipe.create(req.body, (recipe) => {
-      return res.send("recipe created")
+    const recipeCreate = Recipe.create(req.body, (recipeId) => {
+      console.log(recipeId)
+      return recipeId[0]
     })
 
+    const data = await {
+      file_id: filesPromise,
+      recipe_id: recipeCreate
+    }
+
+    console.log(data)
+
+    await RecipeFile.create({
+      data
+    })
+
+    return res.send('saved')
   },
   show(req, res) {
 
