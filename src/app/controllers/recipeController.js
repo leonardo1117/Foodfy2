@@ -6,7 +6,6 @@ const RecipeFile = require('../models/RecipeFile')
 module.exports = {
   index(req, res) {
 
-
     Recipe.all(function (recipes) {
 
       return res.render('recipes/index', { recipes })
